@@ -1,0 +1,31 @@
+{
+    "presets": [["es2015", { "modules": false }], "react", "stage-0"],
+    "plugins": [
+        "transform-decorators-legacy",
+        "transform-class-properties",
+        [
+            "module-resolver",
+            {
+                "root": ["./src/javascript"],
+                "alias": {
+                    "actions": "actions",
+                    "components": "components",
+                    "config": "config",
+                    "constants": "constants",
+                    "containers": "containers",
+                    "reducers": "reducers",
+                    "store": "store",
+                    "utils": "utils"
+                }
+            }
+        ]
+    ],
+    "env": {
+        "production": {
+            "plugins": [
+                "transform-react-remove-prop-types",
+                "transform-react-constant-elements"
+            ]
+        }
+    }
+}

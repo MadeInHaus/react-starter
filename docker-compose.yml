@@ -1,0 +1,21 @@
+version: '2.1'
+services:
+  web:
+    extends:
+      file: docker-compose.common.yml
+      service: web
+    build:
+      args:
+        NPM_REGISTRY: http://sinopia.view.build
+        PACKAGE_INSTALLER: yarn
+    command: 'bash -c ''node server.js'''
+    ports:
+      - 3000
+    environment:
+      NODE_ENV: 'production'
+      VIRTUAL_HOST: ${VIRTUAL_HOST}
+      LETSENCRYPT_HOST: ${VIRTUAL_HOST}
+      LETSENCRYPT_EMAIL: sam@madeinhaus.com
+    env_file:
+      - ./.docker/common.env
+      - ./.env

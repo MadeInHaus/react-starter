@@ -1,0 +1,15 @@
+version: '2.1'
+services:
+  web:
+    image: "377941069960.dkr.ecr.us-east-1.amazonaws.com/react-redux-webpack-starter/web:${ENV:-local}"
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NPM_REGISTRY: http://sinopia.view.build
+        PACKAGE_INSTALLER: yarn
+    network_mode: "bridge"
+    command: 'npm run start'
+    working_dir: /app/user
+    environment:
+      PORT: 3000
