@@ -2,7 +2,7 @@
     "name": "react-redux-webpack-starter",
     "version": "0.0.1",
     "engines": {
-        "node": ">=5.0.0"
+        "node": ">=6.0.0"
     },
     "description": "React-Redux-Webpack starter with common tasks and scenarios",
     "scripts": {
