@@ -12,7 +12,8 @@
         "clean:build": "rimraf build",
         "prebuild": "npm run clean:build",
         "prestart": "npm run clean:build",
-        "start": "npm run build:dev && nodemon ./server-dev.js"
+        "start": "npm run build:dev && nodemon ./server-dev.js",
+        "format": "prettier-eslint --single-quote --trailing-comma es5 --tab-width 4 --prettierLast --write \"src/**/*.{js,jsx}\" \"gulp/**/*.js\""
     },
     "repository": {
         "type": "git",
@@ -47,6 +48,9 @@
         "node-sass": "4.5.3",
         "nodemon": "1.11.0",
         "postcss-loader": "2.0.6",
+        "prettier": "1.5.3",
+        "prettier-eslint": "6.4.2",
+        "prettier-eslint-cli": "4.1.1",
         "raw-loader": "0.5.1",
         "react-hot-loader": "^1.3.1",
         "rimraf": "2.6.1",
