@@ -32,7 +32,9 @@ class Html extends React.Component {
                         content="Description Here"
                     />
                     {/* <link rel="shortcut icon" href="" /> */}
-                    <link rel="stylesheet" type="text/css" href="css/app.css" />
+                    {console.log(process.env.NODE_ENV)}
+                    {process.env.NODE_ENV === 'production' &&
+                        <link rel="stylesheet" href="css/app.css" />}
                 </head>
                 <body>
                     <div id="app" className="app">
