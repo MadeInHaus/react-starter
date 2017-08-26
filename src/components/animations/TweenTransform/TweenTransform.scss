@@ -1,0 +1,10 @@
+@import '~common/styles/variables';
+
+.entering,
+.exited,
+.entered,
+.exiting {
+    transition-property: transform;
+    transition-duration: 500ms;
+    transition-timing-function: $easeInOut;
+}

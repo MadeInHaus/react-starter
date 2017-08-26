@@ -1,0 +1,14 @@
+@import '~common/styles/variables';
+
+.entering,
+.exited {
+    opacity: 0;
+}
+
+.entered,
+.exiting {
+    opacity: 1;
+    transition-property: opacity, transform;
+    transition-timing-function: $easeInOut;
+    transition-duration: 500ms;
+}
