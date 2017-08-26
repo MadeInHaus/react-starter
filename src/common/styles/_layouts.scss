@@ -1,0 +1,12 @@
+//
+// Layouts
+// ---------------------------
+
+@import "layouts/application";
+@import "layouts/main";
+@import "layouts/navigation";
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+}

@@ -1,0 +1,27 @@
+//
+// Elements
+// ---------------------------
+
+figure {
+    margin: 0;
+}
+
+hr {
+    margin: $baseLineHeight 0;
+    border: 0;
+    border-top: 1px solid $hrBorder;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-width: 0;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
