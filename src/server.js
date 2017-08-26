@@ -8,7 +8,7 @@ import { StaticRouter } from 'react-router';
 import { Provider } from 'react-redux';
 
 import configureStore from 'store/configureStore';
-import { App, Html, PathProvider } from 'containers';
+import { App, Html, PathProvider } from 'components';
 
 const debug = require('debug')('Server:');
 
