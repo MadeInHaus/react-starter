@@ -16,14 +16,7 @@ module.exports = {
         libraryTarget: 'commonjs2',
     },
     resolve: {
-        modules: [
-            path.join(__dirname, '../src/javascript'),
-            path.join(__dirname, '../src/images'),
-            path.join(__dirname, '../src/sass'),
-            path.join(__dirname, '../src/fonts'),
-            path.join(__dirname, '../src/assets'),
-            'node_modules',
-        ],
+        modules: [path.join(__dirname, '../src'), 'node_modules'],
         extensions: ['.js', '.jsx', '.json', '.scss'],
     },
     plugins: [
@@ -36,7 +29,7 @@ module.exports = {
             {
                 test: /\.(js|jsx|es6)?$/,
                 exclude: /node_modules/,
-                include: path.resolve(__dirname, '../src/javascript'),
+                include: [path.resolve(__dirname, '../src')],
                 loader: 'babel-loader',
                 query: {
                     presets: ['react', 'node6', 'stage-0'],
@@ -46,8 +39,36 @@ module.exports = {
                 test: /\.s?css$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: ['css-loader', 'sass-loader'],
+                    use: [
+                        'css-loader',
+                        'sass-loader',
+                        'resolve-url-loader',
+                        'sass-loader?sourceMap',
+                    ],
                 }),
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif|svg)$/,
+                loader: 'url-loader',
+                query: {
+                    limit: 8192,
+                    name: 'images/[name].[ext]?[hash]',
+                },
+            },
+            {
+                test: /\.(woff|woff2|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+                loader: 'url-loader',
+                query: {
+                    limit: 8192,
+                    name: 'fonts/[name].[ext]?[hash]',
+                },
+            },
+            {
+                test: /\.(mp4|avi|mov)$/,
+                loader: 'url-loader',
+                query: {
+                    limit: 10000,
+                },
             },
         ],
     },

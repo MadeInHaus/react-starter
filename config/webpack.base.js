@@ -10,9 +10,12 @@ module.exports = {
             'lodash',
             'react',
             'react-dom',
+            'react-redux',
             'react-router',
             'react-router-dom',
+            'react-waypoint',
             'redux',
+            'redux-thunk',
         ],
     },
     output: {
@@ -21,14 +24,7 @@ module.exports = {
         publicPath: '/',
     },
     resolve: {
-        modules: [
-            path.join(__dirname, '../src/javascript'),
-            path.join(__dirname, '../src/images'),
-            path.join(__dirname, '../src/sass'),
-            path.join(__dirname, '../src/fonts'),
-            path.join(__dirname, '../src/assets'),
-            'node_modules',
-        ],
+        modules: [path.join(__dirname, '../src'), 'node_modules'],
         extensions: ['.js', '.jsx', '.json', '.scss'],
     },
     plugins: [
@@ -45,7 +41,7 @@ module.exports = {
         rules: [
             {
                 test: /\.(js|jsx|es6)?$/,
-                include: [path.resolve(__dirname, '../src/javascript')],
+                include: [path.resolve(__dirname, '../src')],
                 loader: 'babel-loader',
             },
             {
@@ -61,8 +57,12 @@ module.exports = {
                                     '[name]__[local]___[hash:base64:5]',
                             },
                         },
-                        'postcss-loader',
-                        'sass-loader',
+                        {
+                            loader: 'postcss-loader',
+                            options: { sourceMap: true },
+                        },
+                        'resolve-url-loader',
+                        'sass-loader?sourceMap',
                     ],
                 }),
             },
@@ -80,6 +80,14 @@ module.exports = {
                 query: {
                     limit: 8192,
                     name: 'fonts/[name].[ext]?[hash]',
+                },
+            },
+            {
+                test: /\.(mp4|avi|mov)$/,
+                loader: 'url-loader',
+                query: {
+                    limit: 10000,
+                    name: 'videos/[name].[ext]?[hash]',
                 },
             },
         ],

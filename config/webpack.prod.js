@@ -5,6 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const config = require('./webpack.base');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const GLOBALS = {
     'process.env': {
@@ -20,7 +21,7 @@ module.exports = merge.smart(config, {
     plugins: [
         new CopyWebpackPlugin([
             {
-                from: path.join(__dirname, '../src/images'),
+                from: path.join(__dirname, '../src/assets/images'),
                 to: 'images',
             },
         ]),
@@ -29,8 +30,10 @@ module.exports = merge.smart(config, {
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             comments: false,
+            mangle: false,
         }),
         new ExtractTextPlugin('css/app.css'),
+        new OptimizeCssAssetsPlugin(),
     ],
     module: {
         noParse: /\.min\.js$/,
