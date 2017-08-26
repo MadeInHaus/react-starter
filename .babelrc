@@ -12,7 +12,6 @@
                     "components": "components",
                     "config": "config",
                     "constants": "constants",
-                    "containers": "containers",
                     "reducers": "reducers",
                     "store": "store",
                     "utils": "utils"
@@ -22,9 +21,7 @@
     ],
     "env": {
         "production": {
-            "plugins": [
-                "transform-react-remove-prop-types",
-            ]
+            "plugins": ["transform-react-remove-prop-types"]
         }
     }
 }
