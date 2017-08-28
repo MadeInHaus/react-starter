@@ -4,7 +4,8 @@
 
 // Body text
 // ----------
-p, li {
+p,
+li {
     font-size: 1.6em;
     line-height: 1.4;
 }
@@ -26,8 +27,13 @@ strong {
 
 // Headings
 // ---------
-h1, h2, h3, h4, h5, h6 {
-    margin: 0.5em 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
     font-weight: $headingsFontWeight;
     font-family: $headingsFontFamily;
     line-height: 1;
@@ -45,7 +51,7 @@ h2 {
 }
 
 h3 {
-    font-size: 2.4em
+    font-size: 2.4em;
 }
 
 h4 {

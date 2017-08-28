@@ -20,8 +20,17 @@ img {
     -ms-interpolation-mode: bicubic;
 }
 
-ul, ol {
+ul,
+ol {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+button {
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
 }

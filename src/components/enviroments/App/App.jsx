@@ -3,9 +3,11 @@ import { Route, Switch } from 'react-router-dom';
 
 import { Navigation, NotFound } from 'components';
 
+import './App.scss';
+
 const App = () => {
     return (
-        <div>
+        <div styleName="app">
             <nav>
                 <Navigation />
             </nav>

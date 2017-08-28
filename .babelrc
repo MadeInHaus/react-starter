@@ -4,14 +4,26 @@
         "transform-decorators-legacy",
         "transform-class-properties",
         [
+            "react-css-modules",
+            {
+                "generateScopedName": "[name]__[local]___[hash:base64:5]",
+                "filetypes": {
+                    ".scss": {
+                        "syntax": "postcss-scss"
+                    }
+                }
+            }
+        ],
+        [
             "module-resolver",
             {
-                "root": ["./src/javascript"],
+                "root": ["./src"],
                 "alias": {
                     "actions": "actions",
                     "components": "components",
                     "config": "config",
                     "constants": "constants",
+                    "containers": "containers",
                     "reducers": "reducers",
                     "store": "store",
                     "utils": "utils"

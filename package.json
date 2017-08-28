@@ -69,6 +69,7 @@
     },
     "dependencies": {
         "axios": "0.16.2",
+        "babel-plugin-react-css-modules": "^3.2.1",
         "classnames": "2.2.5",
         "compression": "1.7.0",
         "connect-inject": "0.4.0",
@@ -79,6 +80,7 @@
         "immutable": "3.8.1",
         "keymirror": "0.1.1",
         "lodash": "4.17.4",
+        "postcss-scss": "^1.0.2",
         "prop-types": "15.5.10",
         "react": "15.6.1",
         "react-dom": "15.6.1",
