@@ -36,7 +36,7 @@ module.exports = {
             filename: 'js/vendor.bundle.js',
             minChunks: Infinity,
         }),
-        new ExtractTextPlugin('[name].css'),
+        new ExtractTextPlugin('css/[name].css'),
         new HtmlWebpackPlugin({
             title: 'React-Redux-Webpack-Boiler',
             template: path.resolve(__dirname, '../src/entrytemplate.ejs'),

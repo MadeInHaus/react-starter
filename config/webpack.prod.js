@@ -32,7 +32,6 @@ module.exports = merge.smart(config, {
             comments: false,
             mangle: false,
         }),
-        new ExtractTextPlugin('css/app.css'),
         new OptimizeCssAssetsPlugin(),
     ],
     module: {
