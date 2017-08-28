@@ -39,7 +39,7 @@ module.exports = {
         new ExtractTextPlugin('[name].css'),
         new HtmlWebpackPlugin({
             title: 'React-Redux-Webpack-Boiler',
-            template: path.resolve(__dirname, '../src/index.html'),
+            template: path.resolve(__dirname, '../src/entrytemplate.ejs'),
         }),
     ],
     module: {
