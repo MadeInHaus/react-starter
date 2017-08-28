@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -36,6 +37,10 @@ module.exports = {
             minChunks: Infinity,
         }),
         new ExtractTextPlugin('[name].css'),
+        new HtmlWebpackPlugin({
+            title: 'React-Redux-Webpack-Boiler',
+            template: path.resolve(__dirname, '../src/index.html'),
+        }),
     ],
     module: {
         rules: [
