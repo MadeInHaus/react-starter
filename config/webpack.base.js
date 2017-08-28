@@ -29,7 +29,9 @@ module.exports = {
         extensions: ['.js', '.jsx', '.json', '.scss'],
     },
     plugins: [
-        new webpack.EnvironmentPlugin(['NODE_ENV']),
+        new webpack.EnvironmentPlugin({
+            NODE_ENV: 'development',
+        }),
         new webpack.optimize.ModuleConcatenationPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
