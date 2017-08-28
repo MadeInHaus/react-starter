@@ -1869,7 +1869,7 @@ cssesc@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-0.1.0.tgz#c814903e45623371a0477b40109aaafbeeaddbb4"
 
-"cssnano@>=2.6.1 <4":
+"cssnano@>=2.6.1 <4", cssnano@^3.4.0:
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/cssnano/-/cssnano-3.8.0.tgz#bb90ac5292f42b679d9a05f6da0e9697556bb80d"
   dependencies:
@@ -3996,6 +3996,13 @@ klaw@^1.0.0:
   optionalDependencies:
     graceful-fs "^4.1.9"
 
+last-call-webpack-plugin@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/last-call-webpack-plugin/-/last-call-webpack-plugin-2.1.1.tgz#bd7af41186b80e6cc3968eee5d65b250eaf791f1"
+  dependencies:
+    lodash "^4.17.4"
+    webpack-sources "^1.0.1"
+
 latest-version@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/latest-version/-/latest-version-1.0.1.tgz#72cfc46e3e8d1be651e1ebb54ea9f6ea96f374bb"
@@ -4829,6 +4836,13 @@ onetime@^2.0.0:
   resolved "http://sinopia.view.build/onetime/-/onetime-2.0.1.tgz#067428230fd67443b2794b22bba528b6867962d4"
   dependencies:
     mimic-fn "^1.0.0"
+
+optimize-css-assets-webpack-plugin@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/optimize-css-assets-webpack-plugin/-/optimize-css-assets-webpack-plugin-3.1.1.tgz#b86f255a762d9143e3db41a64a136a6b76e8c8a7"
+  dependencies:
+    cssnano "^3.4.0"
+    last-call-webpack-plugin "^2.1.1"
 
 optionator@^0.8.2:
   version "0.8.2"
