@@ -1,4 +1,4 @@
-# Isomorphic React-Redux-Webpack Boilerplate
+# React-Redux-Webpack Boilerplate
 
 - [react](https://facebook.github.io/react/)
 - [react-router](https://github.com/rackt/react-router)
