@@ -19,10 +19,10 @@ const TweenTransform = ({
     };
 
     return (
-        <Transition {...props} timeout={500} appear>
+        <Transition timeout={500} appear {...props}>
             {status =>
                 <div
-                    styleName={status}
+                    styleName="tween-transform"
                     style={{
                         ...style,
                         transform: pos[status],

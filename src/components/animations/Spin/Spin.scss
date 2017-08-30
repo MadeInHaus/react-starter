@@ -6,10 +6,7 @@
     }
 }
 
-.entering,
-.entered,
-.exiting,
-.exited {
+.spin {
     animation-name: spin;
     animation-duration: 700ms;
     animation-iteration-count: infinite;
