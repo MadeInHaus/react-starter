@@ -4,7 +4,7 @@ import { CenterComponent } from 'common/components';
 
 import { FadeInTransform } from 'components';
 
-storiesOf('FadeInTransform', module)
+storiesOf('Animations/FadeInTransform', module)
     .add('default', () =>
         <CenterComponent>
             <FadeInTransform in>

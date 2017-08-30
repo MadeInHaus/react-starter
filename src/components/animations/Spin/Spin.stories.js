@@ -4,9 +4,9 @@ import { CenterComponent } from 'common/components';
 
 import { Spin } from 'components';
 
-storiesOf('Spin', module).add('default', () =>
+storiesOf('Animations/Spin', module).add('default', () =>
     <CenterComponent>
-        <Spin in>
+        <Spin>
             <h1>Example</h1>
         </Spin>
     </CenterComponent>

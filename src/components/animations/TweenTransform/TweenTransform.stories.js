@@ -4,7 +4,7 @@ import { CenterComponent } from 'common/components';
 
 import { TweenTransform } from 'components';
 
-storiesOf('TweenTransform', module)
+storiesOf('Animations/TweenTransform', module)
     .add('default', () =>
         <CenterComponent>
             <TweenTransform in>
