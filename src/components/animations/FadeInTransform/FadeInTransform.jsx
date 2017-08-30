@@ -6,8 +6,8 @@ import { FadeIn, TweenTransform } from 'components';
 const FadeInTransform = ({
     children,
     fadeStyle,
-    from,
-    to,
+    start,
+    finish,
     transformStyle,
     ...props
 }) => {
@@ -15,8 +15,8 @@ const FadeInTransform = ({
         <FadeIn {...props} style={fadeStyle}>
             <TweenTransform
                 {...props}
-                from={from}
-                to={to}
+                start={start}
+                finish={finish}
                 style={transformStyle}
             >
                 {children}
@@ -28,8 +28,8 @@ const FadeInTransform = ({
 FadeInTransform.propTypes = {
     children: node,
     fadeStyle: object,
-    from: string,
-    to: string,
+    start: string,
+    finish: string,
     transformStyle: object,
 };
 

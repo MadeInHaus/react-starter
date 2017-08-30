@@ -6,16 +6,16 @@ import './TweenTransform.scss';
 
 const TweenTransform = ({
     children,
-    from = 'translateY(5em)',
+    start = 'translateY(5em)',
     style,
-    to = 'translateY(0)',
+    finish = 'translateY(0)',
     ...props
 }) => {
     const pos = {
-        entering: from,
-        entered: to,
-        exiting: to,
-        exited: from,
+        entering: start,
+        entered: finish,
+        exiting: finish,
+        exited: start,
     };
 
     return (
@@ -36,9 +36,9 @@ const TweenTransform = ({
 
 TweenTransform.propTypes = {
     children: node,
-    from: string,
+    start: string,
     style: object,
-    to: string,
+    finish: string,
 };
 
 export default TweenTransform;
