@@ -8,7 +8,7 @@ const FadeIn = ({ children, style, ...props }) => {
     return (
         <Transition timeout={500} appear {...props}>
             {status =>
-                <div styleName={status} style={style}>
+                <div styleName={`fade-in ${status}`} style={style}>
                     {children}
                 </div>}
         </Transition>

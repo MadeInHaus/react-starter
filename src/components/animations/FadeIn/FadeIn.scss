@@ -1,5 +1,11 @@
 @import '~common/styles/variables';
 
+.fade-in {
+    transition-property: opacity, transform;
+    transition-timing-function: $easeInOut;
+    transition-duration: 500ms;
+}
+
 .entering,
 .exited {
     opacity: 0;
@@ -8,7 +14,4 @@
 .entered,
 .exiting {
     opacity: 1;
-    transition-property: opacity, transform;
-    transition-timing-function: $easeInOut;
-    transition-duration: 500ms;
 }
