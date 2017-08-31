@@ -20,8 +20,8 @@ const Link = ({ to, activeClassName, ...props }) => {
 };
 
 Link.propTypes = {
-    to: string,
     activeClassName: string,
+    to: string,
 };
 
 export default Link;
