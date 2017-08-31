@@ -1,63 +1,46 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { CenterComponent } from 'common/components';
 
 import { TweenTransform } from 'components';
 
 storiesOf('Animations/TweenTransform', module)
     .add('default', () =>
-        <CenterComponent>
-            <TweenTransform in>
-                <h1>Example</h1>
-            </TweenTransform>
-        </CenterComponent>
+        <TweenTransform in>
+            <h1>Example</h1>
+        </TweenTransform>
     )
     .add('from left', () =>
-        <CenterComponent>
-            <TweenTransform in start="translateX(-5em)">
-                <h1>Example</h1>
-            </TweenTransform>
-        </CenterComponent>
+        <TweenTransform in start="translateX(-5em)">
+            <h1>Example</h1>
+        </TweenTransform>
     )
     .add('from right', () =>
-        <CenterComponent>
-            <TweenTransform in start="translateX(5em)">
-                <h1>Example</h1>
-            </TweenTransform>
-        </CenterComponent>
+        <TweenTransform in start="translateX(5em)">
+            <h1>Example</h1>
+        </TweenTransform>
     )
     .add('from top', () =>
-        <CenterComponent>
-            <TweenTransform in start="translateY(-5em)">
-                <h1>Example</h1>
-            </TweenTransform>
-        </CenterComponent>
+        <TweenTransform in start="translateY(-5em)">
+            <h1>Example</h1>
+        </TweenTransform>
     )
     .add('diagonal', () =>
-        <CenterComponent>
-            <TweenTransform in start="translate(5em, 5em)">
-                <h1>Example</h1>
-            </TweenTransform>
-        </CenterComponent>
+        <TweenTransform in start="translate(5em, 5em)">
+            <h1>Example</h1>
+        </TweenTransform>
     )
     .add('flip', () =>
-        <CenterComponent>
-            <TweenTransform in start="rotateX(0)" finish="rotateX(360deg)">
-                <h1>Example</h1>
-            </TweenTransform>
-        </CenterComponent>
+        <TweenTransform in start="rotateX(0)" finish="rotateX(360deg)">
+            <h1>Example</h1>
+        </TweenTransform>
     )
     .add('scale in', () =>
-        <CenterComponent>
-            <TweenTransform in start="scale(1.5)" finish="scale(1)">
-                <h1>Example</h1>
-            </TweenTransform>
-        </CenterComponent>
+        <TweenTransform in start="scale(1.5)" finish="scale(1)">
+            <h1>Example</h1>
+        </TweenTransform>
     )
     .add('scale out', () =>
-        <CenterComponent>
-            <TweenTransform in start="scale(0.5)" finish="scale(1)">
-                <h1>Example</h1>
-            </TweenTransform>
-        </CenterComponent>
+        <TweenTransform in start="scale(0.5)" finish="scale(1)">
+            <h1>Example</h1>
+        </TweenTransform>
     );
