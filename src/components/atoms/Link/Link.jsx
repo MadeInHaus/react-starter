@@ -7,11 +7,16 @@ import './Link.scss';
 const Link = ({ to, activeClassName, ...props }) => {
     if (to) {
         return activeClassName
-            ? <NavLink to={to} activeClassName={activeClassName} {...props} />
-            : <RouterLink to={to} {...props} />;
+            ? <NavLink
+                  activeClassName={activeClassName}
+                  styleName="root"
+                  to={to}
+                  {...props}
+              />
+            : <RouterLink styleName="root" to={to} {...props} />;
     }
 
-    return <a {...props} />;
+    return <a styleName="root" {...props} />;
 };
 
 Link.propTypes = {
