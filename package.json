@@ -23,6 +23,9 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@storybook/addon-actions": "^3.2.6",
+    "@storybook/addon-links": "^3.2.6",
+    "@storybook/react": "^3.2.8",
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
@@ -60,6 +63,7 @@
     "rimraf": "2.6.1",
     "sass-loader": "6.0.6",
     "sass-variable-loader": "0.1.2",
+    "storybook-router": "^0.2.9",
     "style-loader": "0.18.2",
     "uglifyjs-webpack-plugin": "0.4.6",
     "url-loader": "0.5.9",
@@ -67,10 +71,7 @@
     "webpack-dev-middleware": "1.12.0",
     "webpack-hot-middleware": "2.18.2",
     "webpack-merge": "4.1.0",
-    "webpack-node-externals": "1.6.0",
-    "@storybook/react": "^3.2.8",
-    "@storybook/addon-actions": "^3.2.6",
-    "@storybook/addon-links": "^3.2.6"
+    "webpack-node-externals": "1.6.0"
   },
   "dependencies": {
     "axios": "0.16.2",

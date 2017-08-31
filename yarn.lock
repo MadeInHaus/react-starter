@@ -6,7 +6,7 @@
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/@hypnosphi/fuse.js/-/fuse.js-3.0.9.tgz#ea99f6121b4a8f065b4c71f85595db2714498807"
 
-"@storybook/addon-actions@^3.2.6":
+"@storybook/addon-actions@^3.0.0", "@storybook/addon-actions@^3.2.6":
   version "3.2.6"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-3.2.6.tgz#d8e476188a288f49f36a8482175bc2c1898dfc28"
   dependencies:
@@ -3716,11 +3716,11 @@ got@^5.0.0:
     unzip-response "^1.0.2"
     url-parse-lax "^1.0.0"
 
-graceful-fs@^4.0.0, graceful-fs@^4.1.11:
+graceful-fs@^4.0.0, graceful-fs@^4.1.11, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
-graceful-fs@^4.1.2, graceful-fs@^4.1.4, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
+graceful-fs@^4.1.2, graceful-fs@^4.1.4:
   version "4.1.10"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.10.tgz#f2d720c22092f743228775c75e3612632501f131"
 
@@ -6101,21 +6101,21 @@ postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
-postcss@^6.0.1, postcss@^6.0.2, postcss@^6.0.3:
-  version "6.0.8"
-  resolved "http://sinopia.view.build/postcss/-/postcss-6.0.8.tgz#89067a9ce8b11f8a84cbc5117efc30419a0857b3"
-  dependencies:
-    chalk "^2.0.1"
-    source-map "^0.5.6"
-    supports-color "^4.2.0"
-
-postcss@^6.0.10:
+postcss@^6.0.1, postcss@^6.0.10:
   version "6.0.10"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.10.tgz#c311b89734483d87a91a56dc9e53f15f4e6e84e4"
   dependencies:
     chalk "^2.1.0"
     source-map "^0.5.7"
     supports-color "^4.2.1"
+
+postcss@^6.0.2, postcss@^6.0.3:
+  version "6.0.8"
+  resolved "http://sinopia.view.build/postcss/-/postcss-6.0.8.tgz#89067a9ce8b11f8a84cbc5117efc30419a0857b3"
+  dependencies:
+    chalk "^2.0.1"
+    source-map "^0.5.6"
+    supports-color "^4.2.0"
 
 prelude-ls@~1.1.2:
   version "1.1.2"
@@ -6529,7 +6529,7 @@ react-waypoint@^7.0.4:
     consolidated-events "^1.1.0"
     prop-types "^15.0.0"
 
-react@15.6.1:
+react@15.6.1, react@^15.5.4:
   version "15.6.1"
   resolved "http://sinopia.view.build/react/-/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"
   dependencies:
@@ -7148,11 +7148,7 @@ shelljs@^0.7.5, shelljs@^0.7.8:
     interpret "^1.0.0"
     rechoir "^0.6.2"
 
-signal-exit@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.1.tgz#5a4c884992b63a7acd9badb7894c3ee9cfccad81"
-
-signal-exit@^3.0.2:
+signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "http://sinopia.view.build/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
@@ -7203,9 +7199,9 @@ source-map-url@~0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/source-map-url/-/source-map-url-0.3.0.tgz#7ecaf13b57bcd09da8a40c5d269db33799d4aaf9"
 
-source-map@0.5.x, source-map@^0.5.3, source-map@^0.5.6, source-map@~0.5.1, source-map@~0.5.3:
-  version "0.5.6"
-  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.6.tgz#75ce38f52bf0733c5a7f0c118d81334a2bb5f412"
+source-map@0.5.x, source-map@^0.5.7, source-map@~0.5.0:
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
 
 source-map@^0.1.38:
   version "0.1.43"
@@ -7219,9 +7215,9 @@ source-map@^0.4.4:
   dependencies:
     amdefine ">=0.0.4"
 
-source-map@^0.5.7, source-map@~0.5.0:
-  version "0.5.7"
-  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
+source-map@^0.5.3, source-map@^0.5.6, source-map@~0.5.1, source-map@~0.5.3:
+  version "0.5.6"
+  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.6.tgz#75ce38f52bf0733c5a7f0c118d81334a2bb5f412"
 
 sparkles@^1.0.0:
   version "1.0.0"
@@ -7287,6 +7283,14 @@ stdout-stream@^1.4.0:
   resolved "https://registry.yarnpkg.com/stdout-stream/-/stdout-stream-1.4.0.tgz#a2c7c8587e54d9427ea9edb3ac3f2cd522df378b"
   dependencies:
     readable-stream "^2.0.1"
+
+storybook-router@^0.2.9:
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/storybook-router/-/storybook-router-0.2.9.tgz#a48e6bd2d0c8b9a3795a9118b51021c8f8317568"
+  dependencies:
+    "@storybook/addon-actions" "^3.0.0"
+    prop-types "^15.5.10"
+    react "^15.5.4"
 
 stream-browserify@^2.0.1:
   version "2.0.1"
