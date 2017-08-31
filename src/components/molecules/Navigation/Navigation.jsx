@@ -1,22 +1,26 @@
 import React from 'react';
 import { Link } from 'components';
 
+import styles from './Navigation.scss';
+
 export default class Navigation extends React.Component {
     render() {
         return (
             <div>
-                <Link to="/" className="logo" activeClassName="selected">
+                <Link to="/" activeClassName={styles.active} exact>
                     Home
                 </Link>
-                <Link to="/about" activeClassName="selected">
+                <Link to="/about" activeClassName={styles.active} exact>
                     About
                 </Link>
-                <Link to="/contact">Contact</Link>
-                <Link to="/makejavascriptgreatagain" activeClassName="selected">
+                <Link to="/contact" activeClassName={styles.active} exact>
+                    Contact
+                </Link>
+                <Link to="/notfound" activeClassName={styles.active} exact>
                     404
                 </Link>
                 <Link
-                    href="https://github.com/MadeInHaus/react-flux-gulp-starter"
+                    href="https://github.com/MadeInHaus/react-redux-webpack-starter"
                     target="_blank"
                 >
                     Github
