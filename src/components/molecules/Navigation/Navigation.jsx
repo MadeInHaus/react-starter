@@ -1,29 +1,26 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'components';
 
 export default class Navigation extends React.Component {
     render() {
         return (
             <div>
-                <NavLink to="/" className="logo" activeClassName="selected">
+                <Link to="/" className="logo" activeClassName="selected">
                     Home
-                </NavLink>
-                <NavLink to="/about" activeClassName="selected">
+                </Link>
+                <Link to="/about" activeClassName="selected">
                     About
-                </NavLink>
-                <NavLink to="/contact">Contact</NavLink>
-                <NavLink
-                    to="/makejavascriptgreatagain"
-                    activeClassName="selected"
-                >
+                </Link>
+                <Link to="/contact">Contact</Link>
+                <Link to="/makejavascriptgreatagain" activeClassName="selected">
                     404
-                </NavLink>
-                <NavLink
-                    to="https://github.com/MadeInHaus/react-flux-gulp-starter"
+                </Link>
+                <Link
+                    href="https://github.com/MadeInHaus/react-flux-gulp-starter"
                     target="_blank"
                 >
                     Github
-                </NavLink>
+                </Link>
             </div>
         );
     }

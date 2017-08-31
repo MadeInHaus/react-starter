@@ -1,0 +1,16 @@
+@import '~common/styles/variables';
+
+:global {
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.root {
+    color: $linkColor;
+
+    &:hover {
+        color: $linkColorHover;
+    }
+}
