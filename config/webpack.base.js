@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -38,7 +37,6 @@ module.exports = {
             filename: 'js/vendor.bundle.js',
             minChunks: Infinity,
         }),
-        new ExtractTextPlugin('css/[name].css'),
         new HtmlWebpackPlugin({
             title: 'React-Redux-Webpack-Boiler',
             template: path.resolve(__dirname, '../src/entrytemplate.ejs'),
@@ -53,25 +51,22 @@ module.exports = {
             },
             {
                 test: /\.s?css$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        {
-                            loader: 'css-loader',
-                            query: {
-                                modules: true,
-                                localIdentName:
-                                    '[name]__[local]___[hash:base64:5]',
-                            },
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        query: {
+                            modules: true,
+                            localIdentName: '[name]__[local]___[hash:base64:5]',
                         },
-                        {
-                            loader: 'postcss-loader',
-                            options: { sourceMap: true },
-                        },
-                        'resolve-url-loader',
-                        'sass-loader?sourceMap',
-                    ],
-                }),
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: { sourceMap: true },
+                    },
+                    'resolve-url-loader',
+                    'sass-loader?sourceMap',
+                ],
             },
             {
                 test: /\.(png|jpg|jpeg|gif|svg)$/,
