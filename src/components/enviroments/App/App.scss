@@ -13,29 +13,4 @@
 }
 
 .app {
-    font-size: 1em;
-
-    @include largeMobile {
-        & {
-            font-size: 1.2em;
-        }
-    }
-
-    @include tablet {
-        & {
-            font-size: 1.3em;
-        }
-    }
-
-    @include desktop {
-        & {
-            font-size: 1.8em;
-        }
-    }
-
-    @include largeDesktop {
-        & {
-            font-size: 2.3em;
-        }
-    }
 }
