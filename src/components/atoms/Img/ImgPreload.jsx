@@ -9,10 +9,6 @@ export default class PreloadImage extends PureComponent {
         src: string.isRequired,
     };
 
-    static defaultProps = {
-        loader: <DefaultLoader />,
-    };
-
     state = {
         loaded: false,
     };
@@ -47,13 +43,13 @@ export default class PreloadImage extends PureComponent {
     };
 
     render() {
-        const { loader } = this.props;
+        const { loader, ...props } = this.props;
         const { loaded } = this.state;
 
         if (!loaded) {
-            return <loader />;
+            return loader || <DefaultLoader />;
         }
 
-        return <Img {...this.props} />;
+        return <Img {...props} />;
     }
 }
