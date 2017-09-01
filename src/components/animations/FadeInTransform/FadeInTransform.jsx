@@ -9,15 +9,16 @@ const FadeInTransform = ({
     start,
     finish,
     transformStyle,
+    style,
     ...props
 }) => {
     return (
-        <FadeIn {...props} style={fadeStyle}>
+        <FadeIn {...props} style={{ ...style, ...fadeStyle }}>
             <TweenTransform
                 {...props}
                 start={start}
                 finish={finish}
-                style={transformStyle}
+                style={{ ...style, ...transformStyle }}
             >
                 {children}
             </TweenTransform>
@@ -28,8 +29,9 @@ const FadeInTransform = ({
 FadeInTransform.propTypes = {
     children: node,
     fadeStyle: object,
-    start: string,
     finish: string,
+    start: string,
+    style: object,
     transformStyle: object,
 };
 
