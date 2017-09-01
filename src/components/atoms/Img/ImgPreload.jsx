@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react';
-import { object, string } from 'prop-types';
+import { node, string } from 'prop-types';
 
-import { Img, Loader as DefaultLoader } from 'components';
+import { FadeIn, Img, Loader as DefaultLoader } from 'components';
 
-export default class PreloadImage extends PureComponent {
+export default class ImgPreload extends PureComponent {
     static propTypes = {
-        loader: object,
+        loader: node,
         src: string.isRequired,
     };
 
@@ -46,10 +46,16 @@ export default class PreloadImage extends PureComponent {
         const { loader, ...props } = this.props;
         const { loaded } = this.state;
 
+        console.log(loader);
+
         if (!loaded) {
             return loader || <DefaultLoader />;
         }
 
-        return <Img {...props} />;
+        return (
+            <FadeIn in={loaded}>
+                <Img {...props} />
+            </FadeIn>
+        );
     }
 }
