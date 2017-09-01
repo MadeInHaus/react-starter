@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import { Img, ImgPreload } from 'components';
 
-storiesOf('Global/Image', module)
+storiesOf('Global/Img', module)
     .add('default', () => <Img src="https://placeimg.com/640/480/animals" />)
     .add('preload', () =>
         <ImgPreload src="https://placeimg.com/1000/1000/any" />
