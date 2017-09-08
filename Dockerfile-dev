@@ -1,7 +1,7 @@
 # Inherit from base node
 FROM node:6.11.2-wheezy
 ARG NPM_REGISTRY=http://registry.npmjs.org/
-ARG PACKAGE_INSTALLER=npm
+ARG PACKAGE_INSTALLER=yarn
 
 # Set our env vars
 ENV PORT=3000\
