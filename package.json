@@ -80,7 +80,7 @@
     },
     "dependencies": {
         "axios": "0.16.2",
-        "babel-plugin-react-css-modules": "3.2.1",
+        "babel-plugin-react-css-modules": "3.3.0",
         "classnames": "2.2.5",
         "compression": "1.7.0",
         "connect-inject": "0.4.0",
@@ -100,7 +100,7 @@
         "react-router": "4.2.0",
         "react-router-dom": "4.2.2",
         "react-transition-group": "2.2.0",
-        "react-waypoint": "7.0.4",
+        "react-waypoint": "7.1.0",
         "redux": "3.7.2",
         "redux-logger": "3.0.6",
         "redux-thunk": "2.2.0",
