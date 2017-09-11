@@ -4,25 +4,11 @@
 
 // Body text
 // ----------
-p,
-li {
-    font-size: 1.6em;
-    line-height: 1.4;
-}
 
 p {
     margin: 0 0 1em;
-    text-align: justify;
-}
-
-// Emphasis & Misc
-// -----------------
-em {
-    font-style: italic;
-}
-
-strong {
-    font-weight: $bold;
+    font-size: 1.2em;
+    line-height: 1.4;
 }
 
 // Headings
@@ -33,35 +19,33 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
     font-weight: $headingsFontWeight;
     font-family: $headingsFontFamily;
     line-height: 1;
     color: $headingsColor;
     text-rendering: optimizelegibility;
-    text-transform: uppercase;
 }
 
 h1 {
-    font-size: 4.0em;
-}
-
-h2 {
-    font-size: 3.2em;
-}
-
-h3 {
     font-size: 2.4em;
 }
 
-h4 {
-    font-size: 2.1em;
+h2 {
+    font-size: 2em;
 }
 
-h5 {
+h3 {
     font-size: 1.8em;
 }
 
-h6 {
+h4 {
     font-size: 1.6em;
+}
+
+h5 {
+    font-size: 1.4em;
+}
+
+h6 {
+    font-size: 1.2em;
 }

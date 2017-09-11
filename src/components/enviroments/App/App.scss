@@ -1,42 +1,24 @@
-@import "~common/styles/fonts";
-@import "~common/styles/variables";
-@import "~common/styles/mixins";
-@import "~common/styles/extends";
+@import '~common/styles/fonts';
+@import '~common/styles/variables';
+@import '~common/styles/mixins';
+@import '~common/styles/extends';
 
 :global {
-    @import "~common/styles/normalize";
-    @import "~common/styles/root";
-    @import "~common/styles/typography";
-    @import "~common/styles/links";
-    @import "~common/styles/elements";
-    @import "~common/styles/forms";
-    @import "~common/styles/zindex";
+    @import '~common/styles/normalize';
+    @import '~common/styles/root';
+    @import '~common/styles/typography';
+    @import '~common/styles/links';
+    @import '~common/styles/elements';
+    @import '~common/styles/forms';
+    @import '~common/styles/zindex';
 }
 
 .app {
-    font-size: 1em;
-
-    @include largeMobile {
-        & {
-            font-size: 1.2em;
-        }
-    }
-
-    @include tablet {
-        & {
-            font-size: 1.3em;
-        }
-    }
-
+    padding: 2em;
+    font-size: 1.5em;
     @include desktop {
         & {
-            font-size: 1.8em;
-        }
-    }
-
-    @include largeDesktop {
-        & {
-            font-size: 2.3em;
+            font-size: 2em;
         }
     }
 }

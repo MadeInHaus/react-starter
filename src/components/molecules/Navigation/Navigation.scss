@@ -1,0 +1,18 @@
+//
+// Navigation
+// -------------------------------------
+
+@import '~common/styles/variables';
+
+.wrapper {
+    display: flex;
+    margin-bottom: 2em;
+    border-bottom: 1px solid lighten($black, 75%);
+    a {
+        padding: 0.5em;
+        text-decoration: none;
+    }
+    .selected {
+        color: blue;
+    }
+}
