@@ -38,8 +38,8 @@ module.exports = {
             minChunks: Infinity,
         }),
         new HtmlWebpackPlugin({
-            title: 'React-Redux-Webpack-Boiler',
-            template: path.resolve(__dirname, '../src/entrytemplate.ejs'),
+            title: 'React-Redux-Webpack Starter',
+            template: path.resolve(__dirname, '../src/templates/index.ejs'),
         }),
     ],
     module: {
