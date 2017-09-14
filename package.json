@@ -8,7 +8,7 @@
         "React-Redux-Webpack starter with common tasks and scenarios",
     "scripts": {
         "build":
-            "NODE_ENV=production webpack --config ./config/webpack.prod.js --progress && npm run build:server",
+            "env-cmd ./.env webpack --config ./config/webpack.prod.js --progress && npm run build:server",
         "build:dev":
             "webpack --config ./config/webpack.dev.js --progress && npm run build:server",
         "build:server":
@@ -86,6 +86,7 @@
         "connect-inject": "0.4.0",
         "debug": "3.0.1",
         "dotenv": "4.0.0",
+        "env-cmd": "^5.1.0",
         "express": "4.15.4",
         "imagemin-webpack-plugin": "1.5.2",
         "immutable": "3.8.1",
