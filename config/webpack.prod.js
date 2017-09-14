@@ -8,6 +8,7 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const config = require('./webpack.base');
+const getPublicPath = require('./getPublicPath');
 
 const GLOBALS = {
     'process.env': {
@@ -19,6 +20,9 @@ module.exports = merge.smart(config, {
     devtool: 'cheap-module-source-map',
     entry: {
         client: ['client'],
+    },
+    output: {
+        publicPath: getPublicPath(),
     },
     plugins: [
         new CopyWebpackPlugin([
