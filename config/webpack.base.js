@@ -19,10 +19,9 @@ module.exports = {
         ],
     },
     output: {
-        filename: 'js/[name].[chunkhash].js',
-        chunkFilename: 'js/[name].[chunkhash].js',
+        filename: 'js/[name].[hash].js',
+        chunkFilename: 'js/[name].[hash].js',
         path: path.resolve(__dirname, '../build/client'),
-        publicPath: '/',
     },
     resolve: {
         modules: [path.join(__dirname, '../src'), 'node_modules'],

@@ -20,6 +20,11 @@ module.exports = merge.smart(config, {
     entry: {
         client: ['client'],
     },
+    output: {
+        filename: 'js/[name].[chunkhash].js',
+        chunkFilename: 'js/[name].[chunkhash].js',
+        publicPath: '/',
+    },
     plugins: [
         new CopyWebpackPlugin([
             {
