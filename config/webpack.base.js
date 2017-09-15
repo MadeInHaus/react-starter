@@ -19,9 +19,9 @@ module.exports = {
         ],
     },
     output: {
-        filename: 'js/[name].js',
+        filename: 'js/[name].[hash].js',
+        chunkFilename: 'js/[name].[hash].js',
         path: path.resolve(__dirname, '../build/client'),
-        publicPath: '/',
     },
     resolve: {
         modules: [path.join(__dirname, '../src'), 'node_modules'],
@@ -34,8 +34,10 @@ module.exports = {
         new webpack.optimize.ModuleConcatenationPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
-            filename: 'js/vendor.bundle.js',
             minChunks: Infinity,
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'runtime',
         }),
         new HtmlWebpackPlugin({
             title: 'React-Redux-Webpack Starter',
