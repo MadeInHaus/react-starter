@@ -13,6 +13,9 @@ export default class Navigation extends Component {
                 <NavLink to="/about" activeClassName={styles.selected}>
                     About
                 </NavLink>
+                <NavLink to="/code-split" activeClassName={styles.selected}>
+                    Code Split
+                </NavLink>
                 <NavLink to="/contact" activeClassName={styles.selected}>
                     Contact
                 </NavLink>

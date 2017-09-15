@@ -22,6 +22,8 @@ module.exports = merge.smart(config, {
         client: ['client'],
     },
     output: {
+        filename: 'js/[name].[chunkhash].js',
+        chunkFilename: 'js/[name].[chunkhash].js',
         publicPath: getPublicPath(),
     },
     plugins: [
@@ -35,6 +37,7 @@ module.exports = merge.smart(config, {
         new webpack.DefinePlugin(GLOBALS),
         new webpack.NoEmitOnErrorsPlugin(),
         new ExtractTextPlugin('css/[name].css'),
+        new webpack.HashedModuleIdsPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             comments: false,
             mangle: false,
