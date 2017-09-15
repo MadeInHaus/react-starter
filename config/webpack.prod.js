@@ -8,6 +8,7 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const config = require('./webpack.base');
+const getPublicPath = require('./getPublicPath');
 
 const GLOBALS = {
     'process.env': {
@@ -23,7 +24,7 @@ module.exports = merge.smart(config, {
     output: {
         filename: 'js/[name].[chunkhash].js',
         chunkFilename: 'js/[name].[chunkhash].js',
-        publicPath: '/',
+        publicPath: getPublicPath(),
     },
     plugins: [
         new CopyWebpackPlugin([
