@@ -6,7 +6,7 @@ services:
       service: web
     build:
       args:
-        NPM_REGISTRY: http://sinopia.view.build
+        NPM_REGISTRY: http://registry.npmjs.org
         PACKAGE_INSTALLER: yarn
     command: 'bash -c ''node server.js'''
     ports:

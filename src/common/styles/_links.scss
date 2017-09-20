@@ -1,0 +1,10 @@
+//
+// Links
+// ---------------------------
+
+a {
+    color: $linkColor;
+    &:hover {
+        color: $linkColorHover;
+    }
+}

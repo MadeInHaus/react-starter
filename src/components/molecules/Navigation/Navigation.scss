@@ -1,3 +1,15 @@
-.active {
-    text-decoration: underline;
+@import '~common/styles/variables';
+
+.root {
+    display: flex;
+    margin-bottom: 2em;
+    border-bottom: 1px solid lighten($black, 75%);
+    a {
+        padding: 0.5em;
+        text-decoration: none;
+    }
+}
+
+.selected {
+    color: blue;
 }

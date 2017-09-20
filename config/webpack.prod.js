@@ -8,6 +8,7 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const config = require('./webpack.base');
+const getPublicPath = require('./getPublicPath');
 
 const GLOBALS = {
     'process.env': {
@@ -20,6 +21,11 @@ module.exports = merge.smart(config, {
     entry: {
         client: ['client'],
     },
+    output: {
+        filename: 'js/[name].[chunkhash].js',
+        chunkFilename: 'js/[name].[chunkhash].js',
+        publicPath: getPublicPath(),
+    },
     plugins: [
         new CopyWebpackPlugin([
             {
@@ -31,6 +37,7 @@ module.exports = merge.smart(config, {
         new webpack.DefinePlugin(GLOBALS),
         new webpack.NoEmitOnErrorsPlugin(),
         new ExtractTextPlugin('css/[name].css'),
+        new webpack.HashedModuleIdsPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             comments: false,
             mangle: false,

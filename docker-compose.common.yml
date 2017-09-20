@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        NPM_REGISTRY: http://sinopia.view.build
+        NPM_REGISTRY: http://registry.npmjs.org/
         PACKAGE_INSTALLER: yarn
     network_mode: "bridge"
     command: 'npm run start'
