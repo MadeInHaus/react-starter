@@ -7,7 +7,6 @@
     @import '~common/styles/normalize';
     @import '~common/styles/root';
     @import '~common/styles/typography';
-    @import '~common/styles/links';
     @import '~common/styles/elements';
     @import '~common/styles/forms';
     @import '~common/styles/zindex';
@@ -16,6 +15,7 @@
 .app {
     padding: 2em;
     font-size: 1.5em;
+
     @include desktop {
         & {
             font-size: 2em;
