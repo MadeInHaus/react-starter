@@ -1,0 +1,13 @@
+@import '~common/styles/variables';
+
+:global {
+    p {
+        font-size: 1.6em;
+        line-height: 1.4;
+        margin: 0 0 1em;
+        text-align: justify;
+    }
+}
+
+.root {
+}

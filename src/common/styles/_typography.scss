@@ -2,50 +2,12 @@
 // Typography
 // ---------------------------
 
-// Body text
-// ----------
-
-p {
-    margin: 0 0 1em;
-    font-size: 1.2em;
-    line-height: 1.4;
+// Emphasis & Misc
+// -----------------
+em {
+    font-style: italic;
 }
 
-// Headings
-// ---------
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: $headingsFontWeight;
-    font-family: $headingsFontFamily;
-    line-height: 1;
-    color: $headingsColor;
-    text-rendering: optimizelegibility;
-}
-
-h1 {
-    font-size: 2.4em;
-}
-
-h2 {
-    font-size: 2em;
-}
-
-h3 {
-    font-size: 1.8em;
-}
-
-h4 {
-    font-size: 1.6em;
-}
-
-h5 {
-    font-size: 1.4em;
-}
-
-h6 {
-    font-size: 1.2em;
+strong {
+    font-weight: $bold;
 }

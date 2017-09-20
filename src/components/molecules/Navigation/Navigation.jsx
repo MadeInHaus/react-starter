@@ -1,37 +1,32 @@
-import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'components';
 
 import styles from './Navigation.scss';
 
-export default class Navigation extends Component {
-    render() {
-        return (
-            <nav className={styles.wrapper}>
-                <NavLink exact to="/" activeClassName={styles.selected}>
-                    Home
-                </NavLink>
-                <NavLink to="/about" activeClassName={styles.selected}>
-                    About
-                </NavLink>
-                <NavLink to="/code-split" activeClassName={styles.selected}>
-                    Code Split
-                </NavLink>
-                <NavLink to="/contact" activeClassName={styles.selected}>
-                    Contact
-                </NavLink>
-                <NavLink
-                    to="/makejavascriptgreatagain"
-                    activeClassName={styles.selected}
-                >
-                    404
-                </NavLink>
-                <NavLink
-                    to="https://github.com/MadeInHaus/react-redux-webpack-starter"
-                    target="_blank"
-                >
-                    Github
-                </NavLink>
-            </nav>
-        );
-    }
-}
+const Navigation = () => (
+    <nav styleName="root">
+        <Link exact to="/" activeClassName={styles.selected}>
+            Home
+        </Link>
+        <Link to="/about" activeClassName={styles.selected}>
+            About
+        </Link>
+        <Link to="/code-split" activeClassName={styles.selected}>
+            Code Split
+        </Link>
+        <Link to="/contact" activeClassName={styles.selected}>
+            Contact
+        </Link>
+        <Link to="/makejavascriptgreatagain" activeClassName={styles.selected}>
+            404
+        </Link>
+        <Link
+            to="https://github.com/MadeInHaus/react-redux-webpack-starter"
+            target="_blank"
+        >
+            Github
+        </Link>
+    </nav>
+);
+
+export default Navigation;

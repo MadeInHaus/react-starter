@@ -1,0 +1,18 @@
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 10em;
+}
+
+.loader {
+    // background: url('../images/loader.png');
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
+    border-right: black 1px solid;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+}
