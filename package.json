@@ -4,18 +4,29 @@
     "engines": {
         "node": ">=6.0.0"
     },
-    "description": "React-Redux-Webpack starter with common tasks and scenarios",
+    "description":
+        "React-Redux-Webpack starter with common tasks and scenarios",
     "scripts": {
-        "build": "env-cmd ./.env webpack --config ./config/webpack.prod.js --progress && npm run build:server",
-        "build:dev": "webpack --config ./config/webpack.dev.js --progress && npm run build:server",
-        "build:server": "webpack --config ./config/webpack.server.js --progress",
+        "build":
+            "env-cmd ./.env webpack --config ./config/webpack.prod.js --progress && npm run build:server",
+        "build:dev":
+            "webpack --config ./config/webpack.dev.js --progress && npm run build:server",
+        "build:server":
+            "webpack --config ./config/webpack.server.js --progress",
+        "build:server-dev":
+            "webpack --config ./config/webpack.server.js --progress --watch",
         "clean:build": "rimraf build",
         "prebuild": "npm run clean:build",
         "prestart": "npm run clean:build",
-        "start": "npm run build:dev && nodemon ./server-dev.js",
-        "format": "prettier-eslint --single-quote --trailing-comma es5 --tab-width 4 --prettierLast --write \"src/**/*.{js,jsx}\" \"gulp/**/*.js\"",
+        "start":
+            "npm run build:dev && nodemon ./server-dev.js & npm run build:server-dev",
+        "format":
+            "prettier-eslint --single-quote --trailing-comma es5 --tab-width 4 --prettierLast --write \"src/**/*.{js,jsx}\" \"gulp/**/*.js\"",
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook"
+    },
+    "nodemonConfig": {
+        "watch": ["build/server/server.js"]
     },
     "repository": {
         "type": "git",
