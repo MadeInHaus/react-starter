@@ -2,10 +2,10 @@ import React from 'react';
 import { node, number, string } from 'prop-types';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 
-const Stagger = ({ children, chunk, delay, delayType, ...props }) => {
+const Stagger = ({ children, chunk, delay, ...props }) => {
     const getDelay = idx => {
         if (chunk) {
-            return idx % chunk * delay;
+            return (idx % chunk) * delay;
         }
         return idx * delay;
     };
@@ -14,9 +14,7 @@ const Stagger = ({ children, chunk, delay, delayType, ...props }) => {
         <TransitionGroup appear {...props}>
             {React.Children.map(children, (child, i) =>
                 React.cloneElement(child, {
-                    style: {
-                        [`${delayType}Delay`]: `${getDelay(i)}ms`,
-                    },
+                    delay: `${getDelay(i)}ms`,
                 })
             )}
         </TransitionGroup>
@@ -32,7 +30,6 @@ Stagger.propTypes = {
 
 Stagger.defaultProps = {
     delay: 100,
-    delayType: 'transition',
 };
 
 export default Stagger;
