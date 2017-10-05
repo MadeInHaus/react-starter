@@ -1,38 +1,27 @@
 import React from 'react';
-import { node, string, object } from 'prop-types';
+import { node, string } from 'prop-types';
+import { defaultAnimationProps, getInlineStyles } from '../utilities.js';
 
-import { FadeIn, TweenTransform } from 'components';
+import { FadeInOut, TweenTransform } from 'components';
 
-const FadeInTransform = ({
-    children,
-    fadeStyle,
-    start,
-    finish,
-    transformStyle,
-    style,
-    ...props
-}) => {
+const FadeInTransform = ({ children, ...props }) => {
     return (
-        <FadeIn {...props} style={{ ...style, ...fadeStyle }}>
-            <TweenTransform
-                {...props}
-                start={start}
-                finish={finish}
-                style={{ ...style, ...transformStyle }}
-            >
+        <FadeInOut {...props} style={getInlineStyles(props)}>
+            <TweenTransform {...props} style={getInlineStyles(props)}>
                 {children}
             </TweenTransform>
-        </FadeIn>
+        </FadeInOut>
     );
 };
 
 FadeInTransform.propTypes = {
-    children: node,
-    fadeStyle: object,
+    children: node.isRequired,
     finish: string,
     start: string,
-    style: object,
-    transformStyle: object,
+};
+
+FadeInTransform.defaultProps = {
+    ...defaultAnimationProps,
 };
 
 export default FadeInTransform;
