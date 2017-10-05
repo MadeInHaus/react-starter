@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, number, string } from 'prop-types';
+import { node, number } from 'prop-types';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 
 const Stagger = ({ children, chunk, delay, ...props }) => {
@@ -25,7 +25,6 @@ Stagger.propTypes = {
     children: node,
     chunk: number,
     delay: number,
-    delayType: string,
 };
 
 Stagger.defaultProps = {
