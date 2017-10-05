@@ -2,15 +2,11 @@ import React from 'react';
 import { node, object, string } from 'prop-types';
 import Transition from 'react-transition-group/Transition';
 
+import { defaultAnimationProps, getInlineStyles } from '../utilities.js';
+
 import './TweenTransform.scss';
 
-const TweenTransform = ({
-    children,
-    start = 'translateY(5em)',
-    style,
-    finish = 'translateY(0)',
-    ...props
-}) => {
+const TweenTransform = ({ children, start, finish, ...props }) => {
     const pos = {
         entering: start,
         entered: finish,
@@ -19,26 +15,33 @@ const TweenTransform = ({
     };
 
     return (
-        <Transition timeout={500} appear {...props}>
-            {status =>
+        <Transition {...props}>
+            {status => (
                 <div
-                    styleName="tween-transform"
+                    styleName="root"
                     style={{
-                        ...style,
+                        ...getInlineStyles(props),
                         transform: pos[status],
                     }}
                 >
                     {children}
-                </div>}
+                </div>
+            )}
         </Transition>
     );
 };
 
 TweenTransform.propTypes = {
-    children: node,
+    children: node.isRequired,
     start: string,
     style: object,
     finish: string,
+};
+
+TweenTransform.defaultProps = {
+    ...defaultAnimationProps,
+    start: 'translateY(5em)',
+    finish: 'translateY(0)',
 };
 
 export default TweenTransform;

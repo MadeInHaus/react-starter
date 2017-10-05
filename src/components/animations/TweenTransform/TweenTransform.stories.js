@@ -1,46 +1,21 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withKnobs, boolean, number, text } from '@storybook/addon-knobs';
 
 import { TweenTransform } from 'components';
 
 storiesOf('Animations/TweenTransform', module)
-    .add('default', () =>
-        <TweenTransform in>
+    .addDecorator(withKnobs)
+    .add('default', () => (
+        <TweenTransform
+            in={boolean('in', true)}
+            start={text('start', 'translateY(-5em)')}
+            finish={text('finish', 'translateY(0)')}
+            delay={text('delay', '0ms')}
+            duration={text('duration', '500ms')}
+            timingFn={text('timingFn', 'ease-in-out')}
+            timeout={number('timeout', 500)}
+        >
             <h1>Example</h1>
         </TweenTransform>
-    )
-    .add('from left', () =>
-        <TweenTransform in start="translateX(-5em)">
-            <h1>Example</h1>
-        </TweenTransform>
-    )
-    .add('from right', () =>
-        <TweenTransform in start="translateX(5em)">
-            <h1>Example</h1>
-        </TweenTransform>
-    )
-    .add('from top', () =>
-        <TweenTransform in start="translateY(-5em)">
-            <h1>Example</h1>
-        </TweenTransform>
-    )
-    .add('diagonal', () =>
-        <TweenTransform in start="translate(5em, 5em)">
-            <h1>Example</h1>
-        </TweenTransform>
-    )
-    .add('flip', () =>
-        <TweenTransform in start="rotateX(0)" finish="rotateX(360deg)">
-            <h1>Example</h1>
-        </TweenTransform>
-    )
-    .add('scale in', () =>
-        <TweenTransform in start="scale(1.5)" finish="scale(1)">
-            <h1>Example</h1>
-        </TweenTransform>
-    )
-    .add('scale out', () =>
-        <TweenTransform in start="scale(0.5)" finish="scale(1)">
-            <h1>Example</h1>
-        </TweenTransform>
-    );
+    ));
