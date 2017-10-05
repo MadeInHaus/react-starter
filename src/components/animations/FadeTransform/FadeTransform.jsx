@@ -4,7 +4,7 @@ import { defaultAnimationProps, getInlineStyles } from '../utilities.js';
 
 import { FadeInOut, TweenTransform } from 'components';
 
-const FadeInTransform = ({ children, ...props }) => {
+const FadeTransform = ({ children, ...props }) => {
     return (
         <FadeInOut {...props} style={getInlineStyles(props)}>
             <TweenTransform {...props} style={getInlineStyles(props)}>
@@ -14,14 +14,14 @@ const FadeInTransform = ({ children, ...props }) => {
     );
 };
 
-FadeInTransform.propTypes = {
+FadeTransform.propTypes = {
     children: node.isRequired,
     finish: string,
     start: string,
 };
 
-FadeInTransform.defaultProps = {
+FadeTransform.defaultProps = {
     ...defaultAnimationProps,
 };
 
-export default FadeInTransform;
+export default FadeTransform;
