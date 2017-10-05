@@ -9,7 +9,7 @@ storiesOf('Animations/FadeInOut', module)
     .add('default', () => (
         <FadeInOut
             in={boolean('in', true)}
-            timeout={number('timeout', 0)}
+            timeout={number('timeout', 500)}
             delay={text('delay', '0ms')}
             duration={text('duration', '500ms')}
             timingFn={text('timingFn', 'ease-in-out')}
