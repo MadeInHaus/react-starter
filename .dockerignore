@@ -3,7 +3,6 @@ build
 dev.sh
 .git
 .docker
-.env
 Jenkinsfile
 _scripts
 docker-compose.*
