@@ -1,14 +1,14 @@
 import { Record } from 'immutable';
 import { actionTypes } from 'constants';
 
-const AppState = {};
+const appState = new Record();
 
-function appReducer(state = AppState, action) {
+function appReducer(state = appState, action) {
     const cases = {
         default: () => state,
     };
 
-    return (cases[action] || cases.default)();
+    return (cases[action.type] || cases.default)(action.payload);
 }
 
 export default appReducer;
