@@ -1,14 +1,11 @@
 import React from 'react';
 
-import { Spin } from 'components';
-
 import './Loader.scss';
 
-const Loader = () =>
+const Loader = () => (
     <div styleName="root">
-        <Spin in>
-            <div styleName="loader" />
-        </Spin>
-    </div>;
+        <div styleName="loader" />
+    </div>
+);
 
 export default Loader;

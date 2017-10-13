@@ -1,9 +1,19 @@
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .root {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     min-height: 10em;
+    animation-name: spin;
+    animation-duration: 700ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 .loader {

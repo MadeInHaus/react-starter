@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 import { node, string } from 'prop-types';
 
-import { FadeIn, Img, Loader as DefaultLoader } from 'components';
+import { Img, Loader as DefaultLoader } from 'components';
+import { FadeInOut } from 'react-animation-components';
 
 export default class ImgPreload extends PureComponent {
     static propTypes = {
@@ -53,9 +54,9 @@ export default class ImgPreload extends PureComponent {
         }
 
         return (
-            <FadeIn in={loaded}>
+            <FadeInOut in={loaded}>
                 <Img {...props} />
-            </FadeIn>
+            </FadeInOut>
         );
     }
 }
