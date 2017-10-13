@@ -45,7 +45,6 @@ module.exports = merge.smart(config, {
         new OptimizeCssAssetsPlugin(),
     ],
     module: {
-        noParse: /\.min\.js$/,
         rules: [
             {
                 test: /\.s?css$/,
