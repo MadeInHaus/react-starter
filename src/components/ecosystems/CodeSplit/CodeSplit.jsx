@@ -11,7 +11,7 @@ const CodeSplit = () => (
         {myDep => (
             <div>
                 <h1>Code Split</h1>
-                <FadeInOut delay="1s" in>
+                <FadeInOut delay={1000} in>
                     <p onClick={myDep}>
                         I only render once my dependency bundle is loaded.
                     </p>
