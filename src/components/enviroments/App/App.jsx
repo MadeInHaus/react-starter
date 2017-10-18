@@ -9,7 +9,7 @@ import './App.scss';
 
 const App = () => {
     return (
-        <div styleName="app">
+        <div className="app">
             <Navigation />
             <main>
                 <Switch>
