@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Bundle } from 'common/components';
-import { FadeInOut } from 'react-animation-components';
+import { FadeTransform } from 'react-animation-components';
 
 const loadMyDep = () =>
     import(/* webpackChunkName: "myDependency" */ './myDep.js');
@@ -11,11 +11,11 @@ const CodeSplit = () => (
         {myDep => (
             <div>
                 <h1>Code Split</h1>
-                <FadeInOut delay={1000} in>
+                <FadeTransform in exit="translateX(10vw)">
                     <p onClick={myDep}>
-                        I only render once my dependency bundle is loaded.
+                        I animate in once my dependency bundle is loaded.
                     </p>
-                </FadeInOut>
+                </FadeTransform>
             </div>
         )}
     </Bundle>
