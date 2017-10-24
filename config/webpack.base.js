@@ -7,7 +7,6 @@ module.exports = {
         vendor: [
             'classnames',
             'debug',
-            'lodash',
             'react',
             'react-dom',
             'react-redux',
