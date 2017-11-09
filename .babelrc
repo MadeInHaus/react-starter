@@ -18,16 +18,15 @@
         [
             "module-resolver",
             {
-                "root": ["./src"],
                 "alias": {
-                    "actions": "actions",
-                    "components": "components",
-                    "config": "config",
-                    "constants": "constants",
-                    "containers": "containers",
-                    "reducers": "reducers",
-                    "store": "store",
-                    "utils": "utils"
+                    "actions": "./src/actions",
+                    "components": "./src/components",
+                    "config": "./src/config",
+                    "constants": "./src/constants",
+                    "containers": "./src/containers",
+                    "reducers": "./src/reducers",
+                    "store": "./src/store",
+                    "utils": "./src/utils"
                 }
             }
         ]
