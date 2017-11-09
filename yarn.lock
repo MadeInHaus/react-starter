@@ -614,9 +614,9 @@ aws4@^1.6.0:
   version "1.6.0"
   resolved "https://registry.npmjs.org/aws4/-/aws4-1.6.0.tgz#83ef5ca860b2b32e4a0deedee8c771b9db57471e"
 
-axios@0.16.2:
-  version "0.16.2"
-  resolved "http://sinopia.view.build/axios/-/axios-0.16.2.tgz#ba4f92f17167dfbab40983785454b9ac149c3c6d"
+axios@0.17.0:
+  version "0.17.0"
+  resolved "https://registry.npmjs.org/axios/-/axios-0.17.0.tgz#7da747916db803f761651d6091d708789b953c6a"
   dependencies:
     follow-redirects "^1.2.3"
     is-buffer "^1.1.5"
@@ -972,16 +972,16 @@ babel-plugin-module-resolver@3.0.0:
     reselect "^3.0.1"
     resolve "^1.4.0"
 
-babel-plugin-react-css-modules@3.3.1:
-  version "3.3.1"
-  resolved "https://registry.npmjs.org/babel-plugin-react-css-modules/-/babel-plugin-react-css-modules-3.3.1.tgz#ac8b473cf3c6b8c3006c7b7f101c7fbba325d7bf"
+babel-plugin-react-css-modules@3.3.2:
+  version "3.3.2"
+  resolved "https://registry.npmjs.org/babel-plugin-react-css-modules/-/babel-plugin-react-css-modules-3.3.2.tgz#a6a95c50edfd09893fec9ae60a381284db234195"
   dependencies:
     ajv "^5.0.0"
     ajv-keywords "^2.1.0"
     babel-plugin-syntax-jsx "^6.18.0"
     babel-types "^6.19.0"
     generic-names "^1.0.2"
-    postcss "^5.2.6"
+    postcss "^6.0.13"
     postcss-modules "^0.6.2"
     postcss-modules-extract-imports "^1.0.1"
     postcss-modules-local-by-default "^1.1.1"
@@ -7071,7 +7071,7 @@ postcss@6.0.1:
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
-postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.2, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.2.5, postcss@^5.2.6, postcss@^5.2.8:
+postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.2, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.2.5, postcss@^5.2.8:
   version "5.2.17"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-5.2.17.tgz#cf4f597b864d65c8a492b2eabe9d706c879c388b"
   dependencies:
@@ -7438,9 +7438,9 @@ react-docgen@^2.15.0:
     node-dir "^0.1.10"
     recast "^0.12.6"
 
-react-dom@16.0.0:
-  version "16.0.0"
-  resolved "https://registry.npmjs.org/react-dom/-/react-dom-16.0.0.tgz#9cc3079c3dcd70d4c6e01b84aab2a7e34c303f58"
+react-dom@16.1.0:
+  version "16.1.0"
+  resolved "https://registry.npmjs.org/react-dom/-/react-dom-16.1.0.tgz#ab6fd2a285096f388aeba51919a573d06c9bdde4"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
@@ -7632,9 +7632,9 @@ react-waypoint@7.3.1:
     consolidated-events "^1.1.0"
     prop-types "^15.0.0"
 
-react@16.0.0:
-  version "16.0.0"
-  resolved "https://registry.npmjs.org/react/-/react-16.0.0.tgz#ce7df8f1941b036f02b2cca9dbd0cb1f0e855e2d"
+react@16.1.0:
+  version "16.1.0"
+  resolved "https://registry.npmjs.org/react/-/react-16.1.0.tgz#1c2bdac3c17fe7ee9282fa35aca6cc36387903e1"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
