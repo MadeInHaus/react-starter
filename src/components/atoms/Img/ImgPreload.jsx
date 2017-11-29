@@ -47,8 +47,6 @@ export default class ImgPreload extends PureComponent {
         const { loader, ...props } = this.props;
         const { loaded } = this.state;
 
-        console.log(loader);
-
         if (!loaded) {
             return loader || <DefaultLoader />;
         }
