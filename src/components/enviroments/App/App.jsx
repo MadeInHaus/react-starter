@@ -6,6 +6,7 @@ import { Route, Switch } from 'react-router-dom';
 import { CodeSplit, Navigation, NotFound } from 'components';
 
 import './App.scss';
+import './Critical.scss?inline';
 
 const App = () => {
     return (
