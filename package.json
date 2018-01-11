@@ -28,7 +28,7 @@
     },
     "lint-staged": {
         "*.{js,json,css,scss,md}": [
-            "prettier --tab-width 4 --single-quote --trailing-comma es5 --write",
+            "prettier-eslint --single-quote --trailing-comma es5 --tab-width 4 --prettierLast --write",
             "git add"
         ]
     },
