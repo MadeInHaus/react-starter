@@ -6,14 +6,16 @@ import './Link.scss';
 
 const Link = ({ to, activeClassName, ...props }) => {
     if (to) {
-        return activeClassName
-            ? <NavLink
-                  activeClassName={activeClassName}
-                  styleName="root"
-                  to={to}
-                  {...props}
-              />
-            : <RouterLink styleName="root" to={to} {...props} />;
+        return activeClassName ? (
+            <NavLink
+                activeClassName={activeClassName}
+                styleName="root"
+                to={to}
+                {...props}
+            />
+        ) : (
+            <RouterLink styleName="root" to={to} {...props} />
+        );
     }
 
     return <a styleName="root" {...props} />;

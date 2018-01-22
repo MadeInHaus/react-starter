@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import { Heading } from 'components';
 
-storiesOf('Global/Heading', module).add('default', () =>
+storiesOf('Global/Heading', module).add('default', () => (
     <div>
         <Heading size={1}>size 1</Heading>
         <Heading size={2}>size 2</Heading>
@@ -12,4 +12,4 @@ storiesOf('Global/Heading', module).add('default', () =>
         <Heading size={5}>size 5</Heading>
         <Heading size={6}>size 6</Heading>
     </div>
-);
+));

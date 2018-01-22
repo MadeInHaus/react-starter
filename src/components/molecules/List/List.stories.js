@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { List, ListItem } from 'components';
 
 storiesOf('Global/List and ListItem', module)
-    .add('default', () =>
+    .add('default', () => (
         <List>
             <ListItem>Example</ListItem>
             <ListItem>Example</ListItem>
@@ -12,8 +12,8 @@ storiesOf('Global/List and ListItem', module)
             <ListItem>Example</ListItem>
             <ListItem>Example</ListItem>
         </List>
-    )
-    .add('ordered', () =>
+    ))
+    .add('ordered', () => (
         <List ordered>
             <ListItem>Example</ListItem>
             <ListItem>Example</ListItem>
@@ -21,4 +21,4 @@ storiesOf('Global/List and ListItem', module)
             <ListItem>Example</ListItem>
             <ListItem>Example</ListItem>
         </List>
-    );
+    ));
