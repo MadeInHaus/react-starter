@@ -5,18 +5,18 @@ import styles from './SvgIcon.scss';
 import icons from './icons';
 
 const SvgIcon = ({ iconType, tag }) => {
-    return React.createElement(`${tag}`, {
+    return React.createElement(tag, {
         className: styles.root,
         dangerouslySetInnerHTML: { __html: icons[iconType] },
     });
 };
 
 SvgIcon.defaultProps = {
-    tag: 'span'
-}
+    tag: 'span',
+};
 
 SvgIcon.propTypes = {
-    iconType: string,
+    iconType: string.isRequired,
     tag: string,
 };
 
