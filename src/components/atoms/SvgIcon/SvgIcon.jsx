@@ -1,12 +1,12 @@
 import React from 'react';
 import { string } from 'prop-types';
-import './SvgIcon.scss';
+import styles from './SvgIcon.scss';
 
 import icons from './icons';
 
 const SvgIcon = ({ iconType, tag }) => {
     return React.createElement(`${tag}`, {
-        className: 'icon',
+        className: styles.root,
         dangerouslySetInnerHTML: { __html: icons[iconType] },
     });
 };
