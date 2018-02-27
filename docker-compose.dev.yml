@@ -14,7 +14,7 @@ services:
     build:
       dockerfile: Dockerfile-dev
       args:
-        PACKAGE_INSTALLER: yarn
+        PACKAGE_INSTALLER: npm
     network_mode: "bridge"
     command: 'bash'
     volumes:
