@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -17,6 +16,18 @@ module.exports = {
             'redux-thunk',
         ],
     },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    chunks: 'initial',
+                    name: 'vendor',
+                    test: 'vendor',
+                    enforce: true,
+                },
+            },
+        },
+    },
     output: {
         filename: 'js/[name].[hash].js',
         chunkFilename: 'js/[name].[hash].js',
@@ -27,17 +38,6 @@ module.exports = {
         extensions: ['.js', '.jsx', '.json', '.scss'],
     },
     plugins: [
-        new webpack.EnvironmentPlugin({
-            NODE_ENV: 'development',
-        }),
-        new webpack.optimize.ModuleConcatenationPlugin(),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            minChunks: Infinity,
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'runtime',
-        }),
         new HtmlWebpackPlugin({
             title: 'React-Redux-Webpack Starter',
             template: path.resolve(__dirname, '../src/templates/index.ejs'),
@@ -47,8 +47,11 @@ module.exports = {
         rules: [
             {
                 test: /\.(js|jsx|es6)?$/,
-                include: [path.resolve(__dirname, '../src')],
+                options: {
+                    cacheDirectory: true,
+                },
                 loader: 'babel-loader',
+                exclude: /node_modules/,
             },
             {
                 test: /\.s?css$/,
