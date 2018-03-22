@@ -20,13 +20,6 @@ module.exports = merge.smart(config, {
     module: {
         rules: [],
     },
-    node: {
-        dgram: 'empty',
-        fs: 'empty',
-        net: 'empty',
-        tls: 'empty',
-        child_process: 'empty',
-    },
     performance: {
         hints: false,
     },
