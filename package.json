@@ -18,7 +18,7 @@
         "clean:build": "rimraf build",
         "prebuild": "npm run clean:build",
         "prestart": "npm run clean:build",
-        "precommit": "lint-staged",
+        "precommit": "docker-compose exec -T web lint-staged",
         "start":
             "npm run build:dev && nodemon ./server-dev.js & npm run build:server-dev",
         "format":
