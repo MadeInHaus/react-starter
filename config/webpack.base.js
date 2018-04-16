@@ -50,25 +50,6 @@ module.exports = {
                 loader: 'babel-loader',
             },
             {
-                test: /\.s?css$/,
-                use: [
-                    'style-loader',
-                    {
-                        loader: 'css-loader',
-                        query: {
-                            modules: true,
-                            localIdentName: '[name]__[local]___[hash:base64:5]',
-                        },
-                    },
-                    {
-                        loader: 'postcss-loader',
-                        options: { sourceMap: true },
-                    },
-                    'resolve-url-loader',
-                    'sass-loader?sourceMap',
-                ],
-            },
-            {
                 test: /\.(png|jpg|jpeg|gif|svg)$/,
                 loader: 'url-loader',
                 query: {

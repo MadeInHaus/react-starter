@@ -45,25 +45,49 @@ module.exports = merge.smart(config, {
         rules: [
             {
                 test: /\.s?css$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        {
-                            loader: 'css-loader',
-                            query: {
-                                modules: true,
-                                localIdentName:
-                                    '[name]__[local]___[hash:base64:5]',
+                oneOf: [
+                    {
+                        resourceQuery: /inline/,
+                        use: [
+                            'style-loader',
+                            {
+                                loader: 'css-loader',
+                                query: {
+                                    modules: true,
+                                    localIdentName:
+                                        '[name]__[local]___[hash:base64:5]',
+                                },
                             },
-                        },
-                        {
-                            loader: 'postcss-loader',
-                            options: { sourceMap: true },
-                        },
-                        'resolve-url-loader',
-                        'sass-loader?sourceMap',
-                    ],
-                }),
+                            {
+                                loader: 'postcss-loader',
+                                options: { sourceMap: true },
+                            },
+                            'resolve-url-loader',
+                            'sass-loader?sourceMap',
+                        ],
+                    },
+                    {
+                        use: ExtractTextPlugin.extract({
+                            fallback: 'style-loader',
+                            use: [
+                                {
+                                    loader: 'css-loader',
+                                    query: {
+                                        modules: true,
+                                        localIdentName:
+                                            '[name]__[local]___[hash:base64:5]',
+                                    },
+                                },
+                                {
+                                    loader: 'postcss-loader',
+                                    options: { sourceMap: true },
+                                },
+                                'resolve-url-loader',
+                                'sass-loader?sourceMap',
+                            ],
+                        }),
+                    },
+                ],
             },
         ],
     },
