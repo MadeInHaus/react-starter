@@ -29,8 +29,7 @@ module.exports = {
         },
     },
     output: {
-        filename: 'js/[name].[hash].js',
-        chunkFilename: 'js/[name].[hash].js',
+        filename: 'js/[name].js',
         path: path.resolve(__dirname, '../build/client'),
     },
     resolve: {
