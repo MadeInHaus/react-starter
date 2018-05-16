@@ -6,8 +6,8 @@ services:
       service: web
     build:
       args:
-        NPM_REGISTRY: http://registry.npmjs.org
-        PACKAGE_INSTALLER: yarn
+        NPM_REGISTRY: https://registry.npmjs.org
+        PACKAGE_INSTALLER: npm
     command: 'bash -c ''node server.js'''
     ports:
       - 3000

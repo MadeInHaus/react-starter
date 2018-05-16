@@ -1,23 +1,26 @@
 const merge = require('webpack-merge');
 const webpack = require('webpack');
 const config = require('./webpack.base');
-const GLOBALS = {
-    'process.env': {
-        NODE_ENV: JSON.stringify('development'),
-    },
-};
 
 module.exports = merge.smart(config, {
+    mode: 'development',
+    devtool: 'cheap-module-source-map',
     cache: true,
-    devtool: 'inline-source-map',
     entry: {
         client: ['webpack-hot-middleware/client', 'client'],
     },
     plugins: [
-        new webpack.DefinePlugin(GLOBALS),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(
+                process.env.NODE_ENV || 'development'
+            ),
+        }),
         new webpack.HotModuleReplacementPlugin(),
     ],
     module: {
         rules: [],
+    },
+    performance: {
+        hints: false,
     },
 });

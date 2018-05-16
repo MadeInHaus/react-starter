@@ -1,7 +1,7 @@
 # Inherit from base node
-FROM node:6.11.2-wheezy
-ARG NPM_REGISTRY=http://registry.npmjs.org/
-ARG PACKAGE_INSTALLER=yarn
+FROM node:8.9.4-wheezy
+ARG NPM_REGISTRY=https://registry.npmjs.org/
+ARG PACKAGE_INSTALLER=npm
 
 # Set our env vars
 ENV PORT=3000\
@@ -17,8 +17,9 @@ RUN mkdir -p /app/user && \
     ${PACKAGE_INSTALLER} config set registry "$NPM_REGISTRY"
 
 WORKDIR /app/user
-COPY package.json yarn.lock /app/user/
+COPY package.json package-lock.json /app/user/
 RUN $PACKAGE_INSTALLER install && \
-    $PACKAGE_INSTALLER cache clean
+    $PACKAGE_INSTALLER cache verify && \
+    $PACKAGE_INSTALLER rebuild
 COPY . /app/user
 RUN npm run build
