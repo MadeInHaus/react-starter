@@ -4,6 +4,9 @@ import { Provider } from 'react-redux';
 
 import { App } from 'components';
 
+import 'normalize.css';
+import './Root.scss';
+
 const Root = props => {
     return (
         <Provider store={props.store}>

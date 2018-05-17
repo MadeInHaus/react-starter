@@ -1,0 +1,11 @@
+.display {
+    composes: _display from global;
+}
+
+.subhead {
+    composes: _subhead from global;
+}
+
+.body {
+    composes: _body from global;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Bundle } from 'common/components';
+import { Text } from 'components';
 import { FadeTransform } from 'react-animation-components';
 
 const loadMyDep = () =>
@@ -10,11 +11,13 @@ const CodeSplit = () => (
     <Bundle load={loadMyDep}>
         {myDep => (
             <div>
-                <h1>Code Split</h1>
+                <Text theme="display" tag="h1">
+                    Code Split
+                </Text>
                 <FadeTransform in exit="translateX(10vw)">
-                    <p onClick={myDep}>
+                    <Text theme="subhead" tag="p" onClick={myDep}>
                         I animate in once my dependency bundle is loaded.
-                    </p>
+                    </Text>
                 </FadeTransform>
             </div>
         )}

@@ -1,25 +1,25 @@
 import React from 'react';
-import { bool, string } from 'prop-types';
+import PropTypes from 'prop-types';
 import { Link } from 'components';
 import cx from 'classnames';
 
-import './Button.scss';
+import styles from './Button.scss';
 
-const Button = ({ to, href, primary, ...props }) => {
-    const styleNames = cx('root', {
-        primary,
+const Button = ({ to, href, theme, ...props }) => {
+    const classNames = cx(styles.root, {
+        [styles.body]: theme === 'body',
     });
 
     if (to || href) {
-        return <Link styleName={styleNames} to={to} href={href} {...props} />;
+        return <Link className={classNames} to={to} href={href} {...props} />;
     }
-    return <button styleName={styleNames} {...props} />;
+    return <button className={classNames} {...props} />;
 };
 
 Button.propTypes = {
-    href: string,
-    primary: bool,
-    to: string,
+    href: PropTypes.string,
+    to: PropTypes.string,
+    theme: PropTypes.string,
 };
 
 export default Button;
