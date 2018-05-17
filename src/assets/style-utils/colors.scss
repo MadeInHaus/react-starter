@@ -5,7 +5,7 @@
 $color-palette-data: (
     white: (base: #fff),
     black: (base: #000),
-    gray: (base: #444, light: #888, extra-light: #eee)
+    gray: (base: #444, light: #666, dark: #222)
 );
 
 /// Returns the color value for a given color name and group.

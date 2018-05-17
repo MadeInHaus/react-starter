@@ -11,17 +11,14 @@
     // Heading styles
     // -------------------------
 
-    ._display {
+    ._headline {
         font-size: 4rem;
         line-height: 1.2;
-        letter-spacing: 4px;
-        text-transform: uppercase;
     }
 
-    ._subhead {
+    ._subheadline {
         font-size: 2.4rem;
         line-height: 1.3;
-        color: color(black);
     }
 
     //
@@ -29,12 +26,11 @@
     // -------------------------
 
     ._body {
-        font-family: $sans;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         line-height: 1.5;
-        color: gray;
+        color: color(gray, light);
         @include for-desktop-up {
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
     }
 }

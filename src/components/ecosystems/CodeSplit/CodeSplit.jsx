@@ -11,7 +11,7 @@ const CodeSplit = () => (
     <Bundle load={loadMyDep}>
         {myDep => (
             <div>
-                <Text theme="display" tag="h1">
+                <Text theme="headline" tag="h1">
                     Code Split
                 </Text>
                 <FadeTransform in exit="translateX(10vw)">

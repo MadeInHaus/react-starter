@@ -1,9 +1,9 @@
-.display {
-    composes: _display from global;
+.headline {
+    composes: _headline from global;
 }
 
-.subhead {
-    composes: _subhead from global;
+.subheadline {
+    composes: _subheadline from global;
 }
 
 .body {

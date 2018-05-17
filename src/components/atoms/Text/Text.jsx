@@ -8,8 +8,8 @@ const Text = ({ children, className, tag, theme, ...props }) => {
     const TagName = tag;
     const classNames = cx({
         [className]: className,
-        [styles.display]: theme === 'display',
-        [styles.subhead]: theme === 'subhead',
+        [styles.headline]: theme === 'headline',
+        [styles.subheadline]: theme === 'subheadline',
         [styles.body]: theme === 'body',
     });
     return (
