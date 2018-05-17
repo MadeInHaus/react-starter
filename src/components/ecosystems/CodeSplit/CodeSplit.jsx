@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import { Bundle } from 'common/components';
-import { Text } from 'components';
+import { Img, Text } from 'components';
 import { FadeTransform } from 'react-animation-components';
 
 const loadMyDep = () =>
@@ -10,16 +10,15 @@ const loadMyDep = () =>
 const CodeSplit = () => (
     <Bundle load={loadMyDep}>
         {myDep => (
-            <Fragment>
+            <FadeTransform in timeout={0}>
                 <Text theme="headline" tag="h1">
-                    Code Split
+                    Code Splitting
                 </Text>
-                <FadeTransform in exit="translateX(10vw)">
-                    <Text theme="subhead" tag="p" onClick={myDep}>
-                        I animate in once my dependency bundle is loaded.
-                    </Text>
-                </FadeTransform>
-            </Fragment>
+                <Text tag="p" onClick={myDep}>
+                    I fade in once my dependency is loaded.
+                </Text>
+                <Img src="https://media.giphy.com/media/121YQW1OQhqGLS/giphy.gif" />
+            </FadeTransform>
         )}
     </Bundle>
 );

@@ -1,19 +1,19 @@
-import React, { PureComponent } from 'react';
-import { func } from 'prop-types';
+import { Component } from 'react';
+import PropTypes from 'prop-types';
 
 const isPromise = o => typeof o === 'object' && typeof o.then === 'function';
 
-export default class Bundle extends PureComponent {
+export default class Bundle extends Component {
     static propTypes = {
-        children: func.isRequired,
-        load: func.isRequired,
+        children: PropTypes.func.isRequired,
+        load: PropTypes.func.isRequired,
     };
 
     state = {
         mod: null,
     };
 
-    componentWillMount() {
+    componentDidMount() {
         this.load(this.props);
     }
 
