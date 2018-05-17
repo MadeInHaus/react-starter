@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import { Bundle } from 'common/components';
 import { Text } from 'components';
@@ -10,7 +10,7 @@ const loadMyDep = () =>
 const CodeSplit = () => (
     <Bundle load={loadMyDep}>
         {myDep => (
-            <div>
+            <Fragment>
                 <Text theme="headline" tag="h1">
                     Code Split
                 </Text>
@@ -19,7 +19,7 @@ const CodeSplit = () => (
                         I animate in once my dependency bundle is loaded.
                     </Text>
                 </FadeTransform>
-            </div>
+            </Fragment>
         )}
     </Bundle>
 );
