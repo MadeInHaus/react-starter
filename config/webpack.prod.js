@@ -38,7 +38,6 @@ module.exports = merge.smart(config, {
             chunkFilename: 'css/[id].css',
         }),
         new webpack.HashedModuleIdsPlugin(),
-        new OptimizeCssAssetsPlugin(),
     ],
     optimization: {
         minimize: true,

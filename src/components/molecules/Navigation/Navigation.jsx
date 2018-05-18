@@ -4,7 +4,7 @@ import { Link, SvgIcon } from 'components';
 import styles from './Navigation.scss';
 
 const Navigation = () => (
-    <nav styleName="root">
+    <nav className={styles.root}>
         <span>
             <Link
                 exact
