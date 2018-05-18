@@ -24,7 +24,7 @@ const Navigation = () => (
                 Code Splitting
             </Link>
             <Link
-                to="/💩"
+                to="/makejavascriptgreatagain"
                 activeClassName={styles.selected}
                 className={styles.link}
             >
