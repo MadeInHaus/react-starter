@@ -5,21 +5,30 @@ import cx from 'classnames';
 
 import styles from './Button.scss';
 
-const Button = ({ to, href, theme, ...props }) => {
+const Button = ({ className, href, theme, to, ...props }) => {
     const classNames = cx(styles.root, {
+        [className]: className,
         [styles.body]: theme === 'body',
     });
 
     if (to || href) {
-        return <Link className={classNames} to={to} href={href} {...props} />;
+        return <Link {...props} className={classNames} to={to} href={href} />;
     }
-    return <button className={classNames} {...props} />;
+    return <button {...props} className={classNames} />;
 };
 
 Button.propTypes = {
+    className: PropTypes.string,
     href: PropTypes.string,
-    to: PropTypes.string,
     theme: PropTypes.string,
+    to: PropTypes.string,
+};
+
+Button.defaultProps = {
+    className: null,
+    href: null,
+    theme: 'body',
+    to: null,
 };
 
 export default Button;

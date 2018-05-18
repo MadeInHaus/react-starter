@@ -5,11 +5,11 @@ import { Route, Switch } from 'react-router-dom';
 
 import { CodeSplit, Home, Navigation, NotFound } from 'components';
 
-import './App.scss';
+import styles from './App.scss';
 
 const App = () => {
     return (
-        <div className="app">
+        <div className={styles.root}>
             <Navigation />
             <main>
                 <Switch>

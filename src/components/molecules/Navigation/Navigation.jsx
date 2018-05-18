@@ -1,43 +1,44 @@
 import React from 'react';
-import { Link, SvgIcon } from 'components';
+import { Button, SvgIcon } from 'components';
 
 import styles from './Navigation.scss';
 
 const Navigation = () => (
     <nav className={styles.root}>
         <span>
-            <Link
+            <Button
                 exact
                 to="/"
                 activeClassName={styles.selected}
                 className={styles.logo}
             >
                 //
-            </Link>
+            </Button>
         </span>
         <span>
-            <Link
+            <Button
                 to="/code-split"
+                theme="body"
                 activeClassName={styles.selected}
                 className={styles.link}
             >
                 Code Splitting
-            </Link>
-            <Link
+            </Button>
+            <Button
                 to="/makejavascriptgreatagain"
                 activeClassName={styles.selected}
                 className={styles.link}
             >
                 404
-            </Link>
-            <Link
+            </Button>
+            <Button
                 to="https://github.com/MadeInHaus/react-redux-webpack-starter"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.link}
             >
                 <SvgIcon iconType="github" />
-            </Link>
+            </Button>
         </span>
     </nav>
 );
