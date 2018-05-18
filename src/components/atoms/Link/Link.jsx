@@ -2,23 +2,23 @@ import React from 'react';
 import { string } from 'prop-types';
 import { Link as RouterLink, NavLink } from 'react-router-dom';
 
-import './Link.scss';
+import styles from './Link.scss';
 
 const Link = ({ to, activeClassName, ...props }) => {
     if (to) {
         return activeClassName ? (
             <NavLink
                 activeClassName={activeClassName}
-                styleName="root"
+                className={styles.root}
                 to={to}
                 {...props}
             />
         ) : (
-            <RouterLink styleName="root" to={to} {...props} />
+            <RouterLink className={styles.root} to={to} {...props} />
         );
     }
 
-    return <a styleName="root" {...props} />;
+    return <a className={styles.root} {...props} />;
 };
 
 Link.propTypes = {
