@@ -83,9 +83,20 @@ module.exports = function(config = {}) {
                     options: {
                         cacheDirectory: DEV,
                         presets: [
-                            ['es2015', { modules: false }],
-                            'react',
+                            [
+                                'env',
+                                {
+                                    targets: {
+                                        browsers: browserlist,
+                                    },
+                                    modules: false,
+                                    loose: true,
+                                    useBuiltIns: false,
+                                    debug: true,
+                                },
+                            ],
                             'stage-0',
+                            'react',
                         ],
                         plugins: [
                             'syntax-dynamic-import',
@@ -123,8 +134,6 @@ module.exports = function(config = {}) {
                             query: {
                                 modules: true,
                                 minimize: !DEV,
-                                localIdentName:
-                                    '[name]_[local]_[hash:base64:3]',
                                 getLocalIdent: (
                                     context,
                                     localIdentName,
