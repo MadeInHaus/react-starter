@@ -6,10 +6,11 @@ import styles from './Home.scss';
 const Navigation = () => (
     <article className={styles.root}>
         <Text tag="h1" theme="headline">
-            Client-side SPA Starter
+            🙋‍♂️
         </Text>
         <Text tag="h2" theme="subheadline">
-            Comes bundled with React, Redux, Webpack and some other goodies.
+            Comes bundled with React, Redux, CSS Modules, React-Router 4,
+            Webpack 4 and more!
         </Text>
         <div className={styles.columns}>
             <Text tag="p" theme="body">

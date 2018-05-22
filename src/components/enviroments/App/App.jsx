@@ -11,7 +11,7 @@ const App = () => {
     return (
         <div className={styles.root}>
             <Navigation />
-            <main>
+            <main className={styles.main}>
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route path="/code-split" component={CodeSplit} />

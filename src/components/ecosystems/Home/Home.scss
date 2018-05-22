@@ -1,7 +1,7 @@
 @import '~assets/style-utils/breakpoints';
 
 .root {
-    display: block;
+    max-width: $desktop;
 }
 
 .columns {

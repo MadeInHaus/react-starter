@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Bundle } from 'common/components';
-import { Img, Text } from 'components';
+import { Text } from 'components';
 import { FadeTransform } from 'react-animation-components';
 
 const loadMyDep = () =>
@@ -17,7 +17,15 @@ const CodeSplit = () => (
                 <Text tag="p" onClick={myDep}>
                     I fade in once my dependency is loaded.
                 </Text>
-                <Img src="https://media.giphy.com/media/121YQW1OQhqGLS/giphy.gif" />
+                <Text theme="subheadline">
+                    👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍
+                    👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍
+                    👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍
+                    👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍
+                    👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍
+                    👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍
+                    👍 👍 👍 👍 👍 👍 👍 👍 👍 ❤️
+                </Text>
             </FadeTransform>
         )}
     </Bundle>

@@ -1,3 +1,19 @@
+@import '~assets/style-utils/breakpoints';
+
 .root {
     padding: 2rem;
+}
+
+@include for-tablet-portrait-up {
+    .main {
+        padding-right: 4rem;
+        padding-left: 4rem;
+    }
+}
+
+@include for-desktop-up {
+    .main {
+        padding-right: 8rem;
+        padding-left: 8rem;
+    }
 }
