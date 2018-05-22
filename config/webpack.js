@@ -7,11 +7,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const getPublicPath = require('./getPublicPath');
 const generateScopedName = require('./generateScopedName');
 
-const generateDevScopedName = (localName, resourcePath) => {
-    const componentName = resourcePath.split('/').slice(-2, -1);
-    return componentName + '_' + localName;
-};
-
 const browserlist = ['> 1% in US', 'not ie 11', 'not op_mini all'];
 
 module.exports = function(config = {}) {
@@ -133,21 +128,7 @@ module.exports = function(config = {}) {
                             query: {
                                 modules: true,
                                 minimize: !DEV,
-                                getLocalIdent: (
-                                    context,
-                                    localIdentName,
-                                    localName
-                                ) => {
-                                    return DEV
-                                        ? generateDevScopedName(
-                                              localName,
-                                              context.resourcePath
-                                          )
-                                        : generateScopedName(
-                                              localName,
-                                              context.resourcePath
-                                          );
-                                },
+                                getLocalIdent: generateScopedName,
                                 importLoaders: 1,
                             },
                         },
