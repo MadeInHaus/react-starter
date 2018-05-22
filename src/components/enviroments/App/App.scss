@@ -1,7 +1,17 @@
 @import '~assets/style-utils/breakpoints';
+@import '~assets/style-utils/colors';
 
 .root {
     padding: 2rem;
+}
+
+.footer {
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 2rem;
+    background-color: color(white);
 }
 
 @include for-tablet-portrait-up {

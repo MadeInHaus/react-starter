@@ -3,7 +3,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import { CodeSplit, Home, Navigation, NotFound } from 'components';
+import { Button, CodeSplit, Home, Navigation, NotFound } from 'components';
 
 import styles from './App.scss';
 
@@ -18,6 +18,9 @@ const App = () => {
                     <Route component={NotFound} />
                 </Switch>
             </main>
+            <footer className={styles.footer}>
+                <Button href="https://madeinhaus.com">&copy; HAUS</Button>
+            </footer>
         </div>
     );
 };
