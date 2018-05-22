@@ -32,7 +32,6 @@ module.exports = function(config = {}) {
                 'react-redux',
                 'react-router',
                 'react-router-dom',
-                'react-waypoint',
                 'redux',
                 'redux-thunk',
             ],
