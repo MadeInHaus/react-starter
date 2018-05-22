@@ -47,7 +47,7 @@ module.exports = function(config = {}) {
             extensions: ['.js', '.jsx', '.json', '.scss'],
         },
         performance: {
-            hints: DEV ? 'warning' : false,
+            hints: !DEV ? 'warning' : false,
         },
         optimization: {
             minimize: !DEV,
