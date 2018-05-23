@@ -6,12 +6,7 @@ import styles from './Text.scss';
 
 const Text = ({ children, className, tag, theme, ...props }) => {
     const TagName = tag;
-    const classNames = cx({
-        [className]: className,
-        [styles.headline]: theme === 'headline',
-        [styles.subheadline]: theme === 'subheadline',
-        [styles.body]: theme === 'body',
-    });
+    const classNames = cx(className, styles[theme]);
     return (
         <TagName {...props} className={classNames}>
             {children}
