@@ -23,7 +23,7 @@ Text.propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
     tag: PropTypes.string,
-    theme: PropTypes.string,
+    theme: PropTypes.oneOf(['headline', 'subheadline', 'body']),
 };
 
 Text.defaultProps = {
