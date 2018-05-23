@@ -1,0 +1,10 @@
+// Layout
+// --------------------------
+
+$appTopBorderThickness: 3px;
+$contentMaxWidth: 1200px;
+
+:export {
+    apptopborderthickness: $appTopBorderThickness;
+    contentmaxwidth: $contentMaxWidth;
+}

@@ -1,15 +1,16 @@
-@import '~common/styles/variables';
+@import '~assets/style-utils/colors';
 
 .root {
     display: flex;
-    margin-bottom: 2em;
-    border-bottom: 1px solid lighten($black, 75%);
-    a {
-        padding: 0.5em;
-        text-decoration: none;
-    }
+    justify-content: space-between;
+    margin-bottom: 10em;
+}
+
+.link {
+    padding: 0.5em;
+    text-decoration: none;
 }
 
 .selected {
-    color: blue;
+    color: color(gray);
 }

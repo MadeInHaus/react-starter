@@ -3,23 +3,24 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import { CodeSplit, Navigation, NotFound } from 'components';
+import { Button, CodeSplit, Home, Navigation, NotFound } from 'components';
 
-import './App.scss';
+import styles from './App.scss';
 
 const App = () => {
     return (
-        <div className="app">
+        <div className={styles.root}>
             <Navigation />
-            <main>
+            <main className={styles.main}>
                 <Switch>
-                    <Route exact path="/" render={() => <h1>Home</h1>} />
-                    <Route path="/about" render={() => <h1>About</h1>} />
-                    <Route path="/contact" render={() => <h1>Contact</h1>} />
+                    <Route exact path="/" component={Home} />
                     <Route path="/code-split" component={CodeSplit} />
                     <Route component={NotFound} />
                 </Switch>
             </main>
+            <footer className={styles.footer}>
+                <Button href="https://madeinhaus.com">&copy; HAUS</Button>
+            </footer>
         </div>
     );
 };

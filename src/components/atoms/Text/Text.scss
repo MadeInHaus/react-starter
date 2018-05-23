@@ -1,0 +1,11 @@
+.headline {
+    composes: _headline from global;
+}
+
+.subheadline {
+    composes: _subheadline from global;
+}
+
+.body {
+    composes: _body from global;
+}

@@ -1,25 +1,3 @@
-@import '~common/styles/variables';
-
-:global {
-    button {
-        padding: 0;
-        border: none;
-        outline: none;
-        background-color: transparent;
-        cursor: pointer;
-    }
-}
-
-.root {
-    padding: 0.5em 1em;
-    background-color: $btnBackground;
-    border: solid 1px $btnBorder;
-
-    &:hover {
-        background-color: $btnBackgroundHighlight;
-    }
-}
-
-.primary {
-    background-color: darken($btnBackground, 35);
+.body {
+    composes: _body from global;
 }

@@ -1,16 +1,8 @@
-@import '~common/styles/variables';
-
-:global {
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-}
+@import '~assets/style-utils/colors';
 
 .root {
-    color: $linkColor;
-
+    color: color(black);
     &:hover {
-        color: $linkColorHover;
+        color: color(gray);
     }
 }

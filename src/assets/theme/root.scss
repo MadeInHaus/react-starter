@@ -1,0 +1,29 @@
+// Root Elements
+// --------------------------
+
+html {
+    box-sizing: border-box;
+    font-size: $baseFontSize;
+    font-family: $baseFontFamily;
+    line-height: $baseLineHeight;
+    touch-action: manipulation;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    color: color(gray);
+    background-color: color(white);
+}

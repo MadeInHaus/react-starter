@@ -1,24 +1,29 @@
-@import '~common/styles/fonts';
-@import '~common/styles/variables';
-@import '~common/styles/mixins';
-@import '~common/styles/extends';
+@import '~assets/style-utils/breakpoints';
+@import '~assets/style-utils/colors';
 
-:global {
-    @import '~common/styles/normalize';
-    @import '~common/styles/root';
-    @import '~common/styles/typography';
-    @import '~common/styles/elements';
-    @import '~common/styles/forms';
-    @import '~common/styles/zindex';
+.root {
+    padding: 2rem;
+}
 
-    .app {
-        padding: 2em;
-        font-size: 1.5em;
+.footer {
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 2rem;
+    background-color: color(white);
+}
 
-        @include desktop {
-            & {
-                font-size: 2em;
-            }
-        }
+@include for-tablet-portrait-up {
+    .main {
+        padding-right: 4rem;
+        padding-left: 4rem;
+    }
+}
+
+@include for-desktop-up {
+    .main {
+        padding-right: 8rem;
+        padding-left: 8rem;
     }
 }

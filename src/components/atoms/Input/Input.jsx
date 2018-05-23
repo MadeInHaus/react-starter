@@ -3,19 +3,19 @@ import { string } from 'prop-types';
 
 import { Button } from 'components';
 
-import './Input.scss';
+import styles from './Input.scss';
 
 const Input = ({ type, ...props }) => {
     switch (type) {
         case 'select':
-            return <select styleName="select" {...props} />;
+            return <select className={styles.select} {...props} />;
         case 'textarea':
-            return <textarea styleName="textarea" {...props} />;
+            return <textarea className={styles.textarea} {...props} />;
         case 'submit':
         case 'button':
             return <Button {...props} />;
         default:
-            return <input type={type} styleName="root" {...props} />;
+            return <input type={type} className={styles.root} {...props} />;
     }
 };
 
