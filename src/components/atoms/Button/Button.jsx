@@ -17,7 +17,7 @@ const Button = ({ className, href, theme, to, ...props }) => {
 Button.propTypes = {
     className: PropTypes.string,
     href: PropTypes.string,
-    theme: PropTypes.oneOf(['body']),
+    theme: PropTypes.oneOf(Object.keys(styles)),
     to: PropTypes.string,
 };
 
