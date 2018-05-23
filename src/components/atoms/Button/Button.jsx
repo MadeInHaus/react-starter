@@ -6,9 +6,7 @@ import cx from 'classnames';
 import styles from './Button.scss';
 
 const Button = ({ className, href, theme, to, ...props }) => {
-    const classNames = cx(styles.root, className, {
-        [styles.body]: theme === 'body',
-    });
+    const classNames = cx(styles.root, className, styles[theme]);
 
     if (to || href) {
         return <Link {...props} className={classNames} to={to} href={href} />;
@@ -19,7 +17,7 @@ const Button = ({ className, href, theme, to, ...props }) => {
 Button.propTypes = {
     className: PropTypes.string,
     href: PropTypes.string,
-    theme: PropTypes.string,
+    theme: PropTypes.oneOf(['body']),
     to: PropTypes.string,
 };
 
