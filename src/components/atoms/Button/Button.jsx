@@ -6,8 +6,7 @@ import cx from 'classnames';
 import styles from './Button.scss';
 
 const Button = ({ className, href, theme, to, ...props }) => {
-    const classNames = cx(styles.root, {
-        [className]: className,
+    const classNames = cx(styles.root, className, {
         [styles.body]: theme === 'body',
     });
 
