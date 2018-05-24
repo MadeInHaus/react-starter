@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
@@ -7,9 +8,9 @@ import { App } from 'components';
 import 'normalize.css';
 import './Root.scss';
 
-const Root = props => {
+const Root = ({ store }) => {
     return (
-        <Provider store={props.store}>
+        <Provider store={store}>
             <BrowserRouter>
                 <App />
             </BrowserRouter>
@@ -17,6 +18,8 @@ const Root = props => {
     );
 };
 
-Root.propTypes = {};
+Root.propTypes = {
+    store: PropTypes.object.isRequired,
+};
 
 export default Root;
