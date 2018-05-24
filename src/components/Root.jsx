@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import { App } from 'components';
-
 import 'normalize.css';
 import './Root.scss';
+
+import { App } from 'components';
 
 const Root = ({ store }) => {
     return (
