@@ -10,7 +10,7 @@ const Navigation = () => (
         </Text>
         <Text tag="h2" theme="subheadline">
             Comes bundled with React, Redux, CSS Modules, React-Router 4,
-            Webpack 4 and more!
+            Webpack 4
         </Text>
         <div className={styles.columns}>
             <Text tag="p" theme="body">
