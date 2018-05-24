@@ -105,6 +105,7 @@ module.exports = function(config = {}) {
                                         common: './src/common',
                                         components: './src/components',
                                         constants: './src/constants',
+                                        containers: './src/containers',
                                         reducers: './src/reducers',
                                         store: './src/store',
                                         templates: './src/templates',

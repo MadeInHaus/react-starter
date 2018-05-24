@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Bundle } from 'common';
+import { Bundle } from 'containers';
 import { Text } from 'ui';
 import { FadeTransform } from 'react-animation-components';
 
