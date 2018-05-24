@@ -101,13 +101,14 @@ module.exports = function(config = {}) {
                                 {
                                     alias: {
                                         actions: './src/actions',
+                                        assets: './src/assets',
+                                        common: './src/common',
                                         components: './src/components',
-                                        config: './src/config',
                                         constants: './src/constants',
-                                        containers: './src/containers',
                                         reducers: './src/reducers',
                                         store: './src/store',
-                                        utils: './src/utils',
+                                        templates: './src/templates',
+                                        ui: './src/common/ui',
                                     },
                                 },
                             ],

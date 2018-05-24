@@ -3,7 +3,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import { Button, CodeSplit, Home, Navigation, NotFound } from 'components';
+import { Button } from 'ui';
+import { CodeSplit, Home, Navigation, NotFound } from 'components';
 
 import styles from './App.scss';
 

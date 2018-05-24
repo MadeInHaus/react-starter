@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { node, string } from 'prop-types';
 
-import { Img, Loader as DefaultLoader } from 'components';
+import { Img, Loader as DefaultLoader } from 'ui';
 import { FadeInOut } from 'react-animation-components';
 
 export default class ImgPreload extends PureComponent {

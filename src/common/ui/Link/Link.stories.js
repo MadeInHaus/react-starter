@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { Link } from 'components';
+import { Link } from 'ui';
 
 storiesOf('Global/Link', module)
     .add('default', () => <Link href="http://www.google.com">Example</Link>)

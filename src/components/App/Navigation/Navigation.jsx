@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, SvgIcon } from 'components';
+import { Button, SvgIcon } from 'ui';
 
 import styles from './Navigation.scss';
 

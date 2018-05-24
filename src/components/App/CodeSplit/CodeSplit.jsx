@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Bundle } from 'common/components';
-import { Text } from 'components';
+import { Bundle } from 'common';
+import { Text } from 'ui';
 import { FadeTransform } from 'react-animation-components';
 
 const loadMyDep = () =>

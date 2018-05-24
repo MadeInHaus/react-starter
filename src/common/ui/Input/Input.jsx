@@ -1,7 +1,7 @@
 import React from 'react';
 import { string } from 'prop-types';
 
-import { Button } from 'components';
+import { Button } from 'ui';
 
 import styles from './Input.scss';
 
