@@ -1,0 +1,29 @@
+@import '~common/style-utils/breakpoints';
+@import '~common/style-utils/colors';
+
+.root {
+    padding: 2rem;
+}
+
+.footer {
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 2rem;
+    background-color: color(white);
+}
+
+@include for-tablet-portrait-up {
+    .main {
+        padding-right: 4rem;
+        padding-left: 4rem;
+    }
+}
+
+@include for-desktop-up {
+    .main {
+        padding-right: 8rem;
+        padding-left: 8rem;
+    }
+}

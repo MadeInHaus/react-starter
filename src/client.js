@@ -9,7 +9,7 @@ import { Root } from 'components';
 
 export const init = {
     render(RootComponent) {
-        const rootEl = document.getElementById('app');
+        const rootEl = document.getElementById('mount');
 
         if (rootEl) {
             ReactDOM.render(<RootComponent store={store} />, rootEl);
