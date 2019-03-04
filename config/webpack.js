@@ -78,7 +78,7 @@ module.exports = function(config = {}) {
                         cacheDirectory: DEV,
                         presets: [
                             [
-                                'env',
+                                '@babel/preset-env',
                                 {
                                     targets: {
                                         browsers: browserlist,
@@ -89,13 +89,15 @@ module.exports = function(config = {}) {
                                     debug: true,
                                 },
                             ],
-                            'stage-0',
-                            'react',
+                            '@babel/preset-react',
                         ],
                         plugins: [
-                            'syntax-dynamic-import',
-                            'transform-decorators-legacy',
-                            'transform-class-properties',
+                            '@babel/plugin-syntax-dynamic-import',
+                            [
+                                '@babel/plugin-proposal-decorators',
+                                { legacy: true },
+                            ],
+                            '@babel/plugin-proposal-class-properties',
                             [
                                 'module-resolver',
                                 {
@@ -129,7 +131,6 @@ module.exports = function(config = {}) {
                             loader: 'css-loader',
                             query: {
                                 modules: true,
-                                minimize: !DEV,
                                 getLocalIdent: generateScopedName,
                                 importLoaders: 1,
                             },

@@ -27,9 +27,6 @@ module.exports = {
                 exclude: /node_modules/,
                 include: [path.resolve(__dirname, '../src')],
                 loader: 'babel-loader',
-                query: {
-                    presets: ['node6', 'stage-0'],
-                },
             },
         ],
     },
