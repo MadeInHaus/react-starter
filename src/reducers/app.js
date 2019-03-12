@@ -1,9 +1,6 @@
-import { Record } from 'immutable';
-import { actionTypes } from 'constants';
+const initialState = {};
 
-const appState = new Record();
-
-function appReducer(state = appState, action) {
+function appReducer(state = initialState, action) {
     const cases = {
         default: () => state,
     };
