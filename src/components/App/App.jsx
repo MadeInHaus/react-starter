@@ -1,6 +1,7 @@
 /* eslint-disable  react/jsx-no-bind */
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Route, Switch } from 'react-router-dom';
 
 import { Button } from 'ui';
@@ -8,9 +9,16 @@ import { CodeSplit, Home, Navigation, NotFound } from 'components';
 
 import styles from './App.scss';
 
-const App = () => {
+function App() {
     return (
         <div className={styles.root}>
+            <Helmet>
+                <title>HAUS React Starter</title>
+                <meta
+                    name="description"
+                    content="A React starter leveraging Redux and Webpack built by the HAUS team."
+                />
+            </Helmet>
             <Navigation />
             <main className={styles.main}>
                 <Switch>
@@ -24,7 +32,7 @@ const App = () => {
             </footer>
         </div>
     );
-};
+}
 
 App.propTypes = {};
 

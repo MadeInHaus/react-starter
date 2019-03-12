@@ -59,7 +59,7 @@ module.exports = function(config = {}) {
         },
         plugins: [
             new HtmlWebpackPlugin({
-                title: 'React-Redux-Webpack Starter',
+                title: 'HAUS React Starter',
                 template: path.resolve(__dirname, '../src/templates/index.ejs'),
             }),
             new webpack.DefinePlugin({
