@@ -1,5 +1,5 @@
 # Inherit from base node
-FROM node:8.9.4-wheezy
+FROM node:10.15.3
 ARG NPM_REGISTRY=https://registry.npmjs.org/
 ARG PACKAGE_INSTALLER=npm
 
