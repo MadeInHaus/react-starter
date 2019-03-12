@@ -10,12 +10,12 @@ const loadMyDep = () =>
 
 function CodeSplit() {
     return (
-        <Bundle load={loadMyDep}>
-            {myDep => (
-                <Fragment>
-                    <Helmet>
-                        <title>Code split example | HAUS React Starter</title>
-                    </Helmet>
+        <Fragment>
+            <Helmet>
+                <title>Code split example | HAUS React Starter</title>
+            </Helmet>
+            <Bundle load={loadMyDep}>
+                {myDep => (
                     <FadeTransform in timeout={0}>
                         <Text theme="headline" tag="h1">
                             Code Splitting
@@ -34,9 +34,9 @@ function CodeSplit() {
                             👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 ❤️
                         </Text>
                     </FadeTransform>
-                </Fragment>
-            )}
-        </Bundle>
+                )}
+            </Bundle>
+        </Fragment>
     );
 }
 
