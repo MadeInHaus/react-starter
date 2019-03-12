@@ -32,7 +32,7 @@ const Navigation = () => (
                 404
             </Button>
             <Button
-                to="https://github.com/MadeInHaus/react-redux-webpack-starter"
+                href="https://github.com/MadeInHaus/react-redux-webpack-starter"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.link}

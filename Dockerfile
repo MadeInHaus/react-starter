@@ -1,5 +1,5 @@
 # Inherit from base node
-FROM node:8.9.4-wheezy
+FROM node:10.15.3
 ARG NPM_REGISTRY=https://registry.npmjs.org/
 ARG PACKAGE_INSTALLER=npm
 
@@ -11,8 +11,8 @@ ENV PORT=3000\
 RUN mkdir -p /app/user && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* &&\
     if [ "$PACKAGE_INSTALLER" = "yarn" ]; then \
-        npm install -g yarn; \
-        ${PACKAGE_INSTALLER} config set ignore-optional false; \
+    npm install -g yarn; \
+    ${PACKAGE_INSTALLER} config set ignore-optional false; \
     fi &&\
     ${PACKAGE_INSTALLER} config set registry "$NPM_REGISTRY"
 
