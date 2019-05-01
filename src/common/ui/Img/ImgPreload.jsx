@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { node, string } from 'prop-types';
 
 import { Img, Loader as DefaultLoader } from 'ui';
-import { FadeInOut } from 'react-animation-components';
+import { FadeTransform } from 'react-animation-components';
 
 export default class ImgPreload extends PureComponent {
     static propTypes = {
@@ -52,9 +52,9 @@ export default class ImgPreload extends PureComponent {
         }
 
         return (
-            <FadeInOut in={loaded}>
+            <FadeTransform in={loaded} timeout={60}>
                 <Img {...props} />
-            </FadeInOut>
+            </FadeTransform>
         );
     }
 }
