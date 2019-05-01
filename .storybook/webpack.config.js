@@ -1,7 +1,10 @@
 const path = require('path');
-const config = require('../config/webpack.dev');
+const custom = require('../config/webpack.dev');
 
-module.exports = {
-    resolve: config.resolve,
-    module: config.module,
+module.exports = async ({ config, mode }) => {
+    return {
+        ...config,
+        resolve: { ...custom.resolve },
+        module: { ...config.module, rules: custom.module.rules },
+    };
 };
