@@ -3,9 +3,9 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, boolean, number } from '@storybook/addon-knobs';
 
-import { LinkTest } from 'ui';
+import LinkTest from './LinkTest';
 
-storiesOf('Global/Button', module)
+storiesOf('Global/LinkTest', module)
     .add('default', () => (
         <LinkTest
             onClick={action('Link Clicked')}

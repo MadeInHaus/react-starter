@@ -29,7 +29,10 @@ export default class LinkTest extends React.Component {
     }
 
     render() {
-        const classNames = cx(styles.root, this.state.class);
+        const classNames = cx(styles.root, {
+            [styles.hovered]: this.state.class === 'hovered',
+            [styles.normal]: this.state.class === 'normal',
+        });
         return (
             <a
                 className={classNames}

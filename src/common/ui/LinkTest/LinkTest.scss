@@ -1,4 +1,18 @@
 .body {
     composes: _body from global;
     background: red;
+    display: block;
+}
+
+.root {
+    background: red;
+    border: 10px solid blue;
+}
+
+.normal {
+    border: 10px solid purple;
+}
+
+.hovered {
+    border: 10px solid red;
 }
