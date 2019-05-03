@@ -30,10 +30,7 @@ module.exports = function(api) {
         plugins,
         env: {
             test: {
-                plugins: [
-                    'require-context-hook',
-                    'transform-es2015-modules-commonjs',
-                ],
+                plugins: ['require-context-hook'],
             },
         },
     };
