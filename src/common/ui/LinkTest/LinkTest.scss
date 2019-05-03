@@ -1,0 +1,4 @@
+.body {
+    composes: _body from global;
+    background: red;
+}
