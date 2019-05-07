@@ -32,6 +32,9 @@ module.exports = function(api) {
             test: {
                 plugins: ['require-context-hook'],
             },
+            screenshot: {
+                plugins: ['require-context-hook'],
+            },
         },
     };
 };
