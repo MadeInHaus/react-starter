@@ -10,26 +10,34 @@ function createCustomizePage(pupDevice) {
     };
 }
 
+const macChromeUserAgent =
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36';
+
+const testDevices = [
+    pupDevices['iPhone X'],
+    pupDevices.iPad,
+    pupDevices['iPad landscape'],
+    {
+        name: 'Desktop 1440x900',
+        userAgent: macChromeUserAgent,
+        viewport: {
+            width: 1440,
+            height: 900,
+        },
+    },
+];
+
 if (process.env.NODE_ENV === 'test') {
     initStoryshots();
 } else if (process.env.NODE_ENV === 'screenshot') {
-    const supportedDevices = new Set(['iPhone 8', 'iPad', 'iPad Pro']);
-
-    for (const supportedDevice of supportedDevices) {
-        const pupDevice = pupDevices[supportedDevice];
-
-        if (!pupDevice) {
-            continue;
-        }
-
-        const customizePage = createCustomizePage(pupDevice);
-
+    testDevices.map(device => {
+        const customizePage = createCustomizePage(device);
         initStoryshots({
-            suite: `Image storyshots: ${pupDevice.name}`,
+            suite: `Image storyshots: ${device.name}`,
             test: imageSnapshot({
                 storybookUrl,
                 customizePage,
             }),
         });
-    }
+    });
 }
