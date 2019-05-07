@@ -23,6 +23,8 @@ Thumbs.db
 nbproject
 *.sublime-project
 *.sublime-workspace
+src/__snapshots__
+src/__image_snapshots__
 
 # Dreamweaver added files
 _notes
