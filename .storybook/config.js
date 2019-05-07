@@ -29,7 +29,7 @@ addParameters({
                 name: 'large',
                 styles: {
                     width: '1440px',
-                    height: '800px',
+                    height: '900px',
                 },
             },
         },
