@@ -15,9 +15,10 @@
         "prestart": "npm run clean:build",
         "start": "npm run build:dev && nodemon ./server-dev.js & npm run build:server-dev",
         "format": "prettier-eslint --single-quote --trailing-comma es5 --tab-width 4 --prettierLast --write \"src/**/*.{js,jsx}\" \"gulp/**/*.js\"",
-        "storybook": "start-storybook -p 6006",
+        "storybook": "start-storybook -p 9001 -c .storybook",
         "build-storybook": "build-storybook",
-        "test": "export NODE_ENV=test && jest"
+        "test": "export NODE_ENV=test && jest",
+        "test:screenshot": "export NODE_ENV=screenshot && jest"
     },
     "jest": {
         "setupFiles": [
@@ -25,7 +26,7 @@
         ],
         "moduleNameMapper": {
             "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-            "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
+            "\\.(css|scss)$": "identity-obj-proxy"
         }
     },
     "nodemonConfig": {
@@ -51,6 +52,8 @@
         "@storybook/addon-knobs": "^5.0.11",
         "@storybook/addon-links": "^5.0.11",
         "@storybook/addon-storyshots": "^5.0.11",
+        "@storybook/addon-storyshots-puppeteer": "^5.0.11",
+        "@storybook/addon-viewport": "^5.0.11",
         "@storybook/addons": "^5.0.11",
         "@storybook/react": "^5.0.11",
         "autoprefixer": "9.4.10",
@@ -81,6 +84,7 @@
         "prettier": "1.16.4",
         "prettier-eslint": "8.8.2",
         "prettier-eslint-cli": "4.7.1",
+        "puppeteer": "^1.15.0",
         "raw-loader": "1.0.0",
         "react-hot-loader": "4.8.0",
         "react-test-renderer": "^16.8.6",
