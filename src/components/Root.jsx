@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import 'normalize.css';
 import './Root.scss';
 
-import { App } from 'components';
+import App from '@components/App/App';
 
 const Root = ({ store }) => {
     return (
