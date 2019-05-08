@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react';
 import { node, string } from 'prop-types';
 
-import Img from '@ui/Img';
-import DefaultLoader from '@ui/Loader';
+import { Img, Loader as DefaultLoader } from '@ui';
 import { FadeTransform } from 'react-animation-components';
 
 export default class ImgPreload extends PureComponent {

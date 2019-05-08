@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 
-import Text from '@ui/Text';
+import { Text } from '@ui';
 
 export default function NotFound() {
     return (

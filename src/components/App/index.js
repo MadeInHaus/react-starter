@@ -4,7 +4,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Route, Switch } from 'react-router-dom';
 
-import Button from '@ui/Button';
+import { Button } from '@ui';
 import CodeSplit from '@components/App/CodeSplit';
 import Home from '@components/App/Home';
 import Navigation from '@components/App/Navigation';
