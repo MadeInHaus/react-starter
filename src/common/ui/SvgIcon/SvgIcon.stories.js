@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { SvgIcon } from 'ui';
+import SvgIcon from '@ui/SvgIcon';
 
 storiesOf('Global/SvgIcon', module).add('default', () => (
     <div>

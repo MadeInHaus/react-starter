@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { Input } from 'ui';
+import Input from '@ui/Input';
 
 storiesOf('Global/Input', module)
     .add('default', () => <Input />)
