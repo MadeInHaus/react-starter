@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '@ui/Button/Button';
-import SvgIcon from '@ui/SvgIcon/SvgIcon';
+import Button from '@ui/Button';
+import SvgIcon from '@ui/SvgIcon';
 
 import styles from './Navigation.scss';
 

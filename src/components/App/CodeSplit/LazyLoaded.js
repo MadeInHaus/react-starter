@@ -1,5 +1,5 @@
 import React from 'react';
-import Text from '@ui/Text/Text';
+import Text from '@ui/Text';
 import { FadeTransform } from 'react-animation-components';
 
 const LazyLoaded = () =>

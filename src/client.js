@@ -5,7 +5,7 @@ import configureStore from 'store';
 
 const store = configureStore();
 
-import Root from './components/Root';
+import Root from './components';
 
 export const init = {
     render(RootComponent) {
@@ -20,5 +20,5 @@ export const init = {
 init.render(Root);
 
 if (module.hot) {
-    module.hot.accept('./components/Root', () => init.render(Root));
+    module.hot.accept('./components', () => init.render(Root));
 }
