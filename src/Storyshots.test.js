@@ -27,14 +27,16 @@ function createCustomizePage(pupDevice) {
     };
 }
 
-testDevices.map(device => {
-    const customizePage = createCustomizePage(device);
-    initStoryshots({
-        storyKindRegex: /Screenshot/,
-        suite: `Image storyshots: ${device.name}`,
-        test: imageSnapshot({
-            storybookUrl,
-            customizePage,
-        }),
+if (process.env.NODE_ENV === 'screenshot') {
+    testDevices.map(device => {
+        const customizePage = createCustomizePage(device);
+        initStoryshots({
+            storyKindRegex: /--SS/,
+            suite: `Image storyshots: ${device.name}`,
+            test: imageSnapshot({
+                storybookUrl,
+                customizePage,
+            }),
+        });
     });
-});
+}

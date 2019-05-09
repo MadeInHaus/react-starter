@@ -17,6 +17,7 @@
         "format": "prettier-eslint --single-quote --trailing-comma es5 --tab-width 4 --prettierLast --write \"src/**/*.{js,jsx}\" \"gulp/**/*.js\"",
         "storybook": "start-storybook -p 9001 -c .storybook",
         "build-storybook": "build-storybook",
+        "test": "export NODE_ENV=test && jest",
         "screenshot": "export NODE_ENV=screenshot && jest"
     },
     "jest": {
