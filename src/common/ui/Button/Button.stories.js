@@ -5,7 +5,7 @@ import { text, boolean, number } from '@storybook/addon-knobs';
 
 import { Button } from 'ui';
 
-storiesOf('Global/Button/Screenshot', module)
+storiesOf('Global/Button--SS', module)
     .addParameters({ viewport: { defaultViewport: 'iphone6' } })
     .add(
         'with viewport small',
