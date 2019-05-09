@@ -5,7 +5,7 @@ import { text, boolean, number } from '@storybook/addon-knobs';
 
 import { Button } from 'ui';
 
-storiesOf('Global/Button', module)
+storiesOf('Global/Button/Screenshot', module)
     .addParameters({ viewport: { defaultViewport: 'iphone6' } })
     .add(
         'with viewport small',
@@ -31,14 +31,6 @@ storiesOf('Global/Button', module)
         ),
         { viewport: { defaultViewport: 'large' } }
     )
-    .add('default', () => (
-        <Button
-            onClick={action('Button Clicked')}
-            disabled={boolean('Disabled', false)}
-        >
-            {text('Label', 'Example')} {number('Number', 89)}
-        </Button>
-    ))
     .add('default', () => (
         <Button
             onClick={action('Button Clicked')}

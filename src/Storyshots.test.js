@@ -30,6 +30,7 @@ function createCustomizePage(pupDevice) {
 testDevices.map(device => {
     const customizePage = createCustomizePage(device);
     initStoryshots({
+        storyKindRegex: /Screenshot/,
         suite: `Image storyshots: ${device.name}`,
         test: imageSnapshot({
             storybookUrl,
