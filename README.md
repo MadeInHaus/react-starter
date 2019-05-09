@@ -8,17 +8,23 @@
 
 ## Start with local Node
 
-NPM Install:
+1. NPM Install:
 
-```
-npm install
-```
+    ```sh
+    npm install
+    ```
+
+2. Run App:
+
+    ```sh
+    npm start
+    ```
 
 ## Start with Docker
 
 Build docker:
 
-```
+```sh
 ./dev.sh
 ```
 
@@ -26,6 +32,6 @@ Build docker:
 
 Run Storybook:
 
-```
+```sh
 npm run storybook
 ```
