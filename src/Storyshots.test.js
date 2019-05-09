@@ -27,6 +27,7 @@ function createCustomizePage(pupDevice) {
     };
 }
 
+// npm run screenshot: takes screenshots of any story with --SS in the name
 if (process.env.NODE_ENV === 'screenshot') {
     testDevices.map(device => {
         const customizePage = createCustomizePage(device);
@@ -39,4 +40,9 @@ if (process.env.NODE_ENV === 'screenshot') {
             }),
         });
     });
+}
+
+// npm run test: creates a snapshot of all stories
+if (process.env.NODE_ENV === 'test') {
+    initStoryshots();
 }
