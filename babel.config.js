@@ -29,9 +29,6 @@ module.exports = function(api) {
         presets,
         plugins,
         env: {
-            test: {
-                plugins: ['require-context-hook'],
-            },
             screenshot: {
                 plugins: ['require-context-hook'],
             },

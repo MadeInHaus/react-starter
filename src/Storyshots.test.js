@@ -4,12 +4,6 @@ import pupDevices from 'puppeteer/DeviceDescriptors';
 
 const storybookUrl = 'http://localhost:9001';
 
-function createCustomizePage(pupDevice) {
-    return function(page) {
-        return page.emulate(pupDevice);
-    };
-}
-
 const macChromeUserAgent =
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36';
 
@@ -27,17 +21,19 @@ const testDevices = [
     },
 ];
 
-if (process.env.NODE_ENV === 'test') {
-    initStoryshots();
-} else if (process.env.NODE_ENV === 'screenshot') {
-    testDevices.map(device => {
-        const customizePage = createCustomizePage(device);
-        initStoryshots({
-            suite: `Image storyshots: ${device.name}`,
-            test: imageSnapshot({
-                storybookUrl,
-                customizePage,
-            }),
-        });
-    });
+function createCustomizePage(pupDevice) {
+    return function(page) {
+        return page.emulate(pupDevice);
+    };
 }
+
+testDevices.map(device => {
+    const customizePage = createCustomizePage(device);
+    initStoryshots({
+        suite: `Image storyshots: ${device.name}`,
+        test: imageSnapshot({
+            storybookUrl,
+            customizePage,
+        }),
+    });
+});
