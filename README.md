@@ -39,7 +39,7 @@ npm run storybook
 
 ## Testing
 
-Run Jest Tests:
+Run Jest Tests (Snapshots and Storyshots)
 
 ```sh
 npm run test
