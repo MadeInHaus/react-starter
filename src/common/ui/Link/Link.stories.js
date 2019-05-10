@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import { Link } from 'ui';
 
-storiesOf('Global/Link--SS', module)
+storiesOf('Global/Link', module)
     .add('default', () => <Link href="http://www.google.com">Example</Link>)
     .add('router (link)', () => <Link to="/someroute">Example</Link>)
     .add('router (navlink)', () => (
