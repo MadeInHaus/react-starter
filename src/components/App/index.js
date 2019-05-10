@@ -4,8 +4,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Route, Switch } from 'react-router-dom';
 
-import { Button } from 'ui';
-import { CodeSplit, Home, Navigation, NotFound } from 'components';
+import { Button } from '@ui';
+import CodeSplit from '@components/App/CodeSplit';
+import Home from '@components/App/Home';
+import Navigation from '@components/App/Navigation';
+import NotFound from '@components/App/NotFound';
 
 import styles from './App.scss';
 

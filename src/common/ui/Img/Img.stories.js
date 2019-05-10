@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { Img, ImgPreload } from 'ui';
+import { Img, ImgPreload } from '@ui';
 
 storiesOf('Global/Img', module)
     .add('default', () => <Img src="https://placeimg.com/640/480/animals" />)

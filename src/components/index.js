@@ -1,7 +1,25 @@
-const req = require.context('.', true, /\.jsx$/);
+import React from 'react';
+import PropTypes from 'prop-types';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-req.keys().forEach(key => {
-    const filename = key.match(/[a-zA-Z]+.jsx$/)[0];
-    const componentName = filename.split('.')[0];
-    module.exports[componentName] = req(key).default;
-});
+import 'normalize.css';
+import './Root.scss';
+
+import App from '@components/App';
+
+const Root = ({ store }) => {
+    return (
+        <Provider store={store}>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </Provider>
+    );
+};
+
+Root.propTypes = {
+    store: PropTypes.object.isRequired,
+};
+
+export default Root;
