@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Global/Button--SS Link (href) 1`] = `
+exports[`Storyshots Global/Button Link (href) 1`] = `
 <div
   className="app"
 >
@@ -13,7 +13,7 @@ exports[`Storyshots Global/Button--SS Link (href) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Global/Button--SS Link (router) 1`] = `
+exports[`Storyshots Global/Button Link (router) 1`] = `
 <div
   className="app"
 >
@@ -27,7 +27,7 @@ exports[`Storyshots Global/Button--SS Link (router) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Global/Button--SS default 1`] = `
+exports[`Storyshots Global/Button default 1`] = `
 <div
   className="app"
 >
@@ -43,7 +43,7 @@ exports[`Storyshots Global/Button--SS default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Global/Button--SS primary 1`] = `
+exports[`Storyshots Global/Button primary 1`] = `
 <div
   className="app"
 >
@@ -57,7 +57,7 @@ exports[`Storyshots Global/Button--SS primary 1`] = `
 </div>
 `;
 
-exports[`Storyshots Global/Button--SS with viewport large 1`] = `
+exports[`Storyshots Global/Button with viewport large 1`] = `
 <div
   className="app"
 >
@@ -73,7 +73,7 @@ exports[`Storyshots Global/Button--SS with viewport large 1`] = `
 </div>
 `;
 
-exports[`Storyshots Global/Button--SS with viewport small 1`] = `
+exports[`Storyshots Global/Button with viewport small 1`] = `
 <div
   className="app"
 >
@@ -85,6 +85,69 @@ exports[`Storyshots Global/Button--SS with viewport small 1`] = `
     Example
      
     89
+  </button>
+</div>
+`;
+
+exports[`Storyshots Global/Clickable--SS Link (href) 1`] = `
+<div
+  className="app"
+>
+  <a
+    className="root primary"
+    href="http://www.google.com"
+  >
+    <span>
+      Google
+    </span>
+  </a>
+</div>
+`;
+
+exports[`Storyshots Global/Clickable--SS Link (router) 1`] = `
+<div
+  className="app"
+>
+  <a
+    className="root primary"
+    href="/"
+    onClick={[Function]}
+  >
+    <span>
+      Router Link
+    </span>
+  </a>
+</div>
+`;
+
+exports[`Storyshots Global/Clickable--SS default 1`] = `
+<div
+  className="app"
+>
+  <button
+    className="root primary"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <span>
+      Example
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Global/Clickable--SS secondary 1`] = `
+<div
+  className="app"
+>
+  <button
+    className="root secondary"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <span>
+      Example
+    </span>
   </button>
 </div>
 `;
@@ -213,7 +276,7 @@ exports[`Storyshots Global/Input textarea 1`] = `
 </div>
 `;
 
-exports[`Storyshots Global/Link--SS default 1`] = `
+exports[`Storyshots Global/Link default 1`] = `
 <div
   className="app"
 >
@@ -226,7 +289,7 @@ exports[`Storyshots Global/Link--SS default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Global/Link--SS router (link) 1`] = `
+exports[`Storyshots Global/Link router (link) 1`] = `
 <div
   className="app"
 >
@@ -240,7 +303,7 @@ exports[`Storyshots Global/Link--SS router (link) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Global/Link--SS router (navlink) 1`] = `
+exports[`Storyshots Global/Link router (navlink) 1`] = `
 <div
   className="app"
 >
