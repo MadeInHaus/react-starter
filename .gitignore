@@ -23,8 +23,6 @@ Thumbs.db
 nbproject
 *.sublime-project
 *.sublime-workspace
-src/__snapshots__
-src/__image_snapshots__
 
 # Dreamweaver added files
 _notes
@@ -102,3 +100,6 @@ settings.json
 !.env.*.*
 .docker/node_modules.tar.gz
 .docker/.npm_revision
+
+# src/__snapshots__
+# src/__image_snapshots__
