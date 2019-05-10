@@ -3,9 +3,21 @@
 // Need to define the raw colors somewhere!
 // stylelint-disable color-no-hex, function-max-empty-lines, value-list-max-empty-lines
 $color-palette-data: (
-    white: (base: #fff),
-    black: (base: #000),
-    gray: (base: #444, light: #666, dark: #222)
+    white: (
+        base: #fff,
+    ),
+    black: (
+        base: #000,
+    ),
+    gray: (
+        base: #444,
+        light: #666,
+        dark: #222,
+    ),
+    blue: (
+        base: #2f69c6,
+        light: #1c78ff,
+    ),
 );
 
 /// Returns the color value for a given color name and group.
