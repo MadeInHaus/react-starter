@@ -3,7 +3,7 @@ import { Text } from 'ui';
 
 import styles from './Home.scss';
 
-const Navigation = () => (
+const Home = () => (
     <article className={styles.root}>
         <Text tag="h1" theme="headline">
             🙋‍♂️
@@ -66,4 +66,4 @@ const Navigation = () => (
     </article>
 );
 
-export default Navigation;
+export default Home;
