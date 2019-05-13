@@ -2,6 +2,7 @@
 @import '~common/style-utils/colors';
 
 .root {
+    composes: _body from global;
     position: relative;
     width: auto;
     margin: 0;
@@ -19,8 +20,6 @@
     -moz-osx-font-smoothing: inherit;
     -webkit-appearance: none;
     text-decoration: none;
-    font-size: 14rem;
-    line-height: 1.5;
     font-family: sans-serif;
     > span {
         display: flex;
@@ -34,6 +33,13 @@
 :disabled {
     pointer-events: none;
     opacity: 0.4;
+}
+
+.body {
+    color: color(black);
+    &:hover {
+        color: color(gray, light);
+    }
 }
 
 .primary,
@@ -66,10 +72,6 @@
 }
 
 @include for-tablet-portrait-up {
-    .root {
-        font-size: 1.6rem;
-    }
-
     .primary,
     .secondary {
         width: auto;
