@@ -26,14 +26,14 @@ Clickable.propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
     href: PropTypes.string,
-    theme: PropTypes.oneOf(['primary', 'secondary']),
+    theme: PropTypes.oneOf(['body', 'default', 'primary', 'secondary']),
     to: PropTypes.string,
 };
 
 Clickable.defaultProps = {
     className: null,
     href: null,
-    theme: 'primary',
+    theme: 'default',
     to: null,
 };
 
