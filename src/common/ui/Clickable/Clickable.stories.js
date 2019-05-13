@@ -10,6 +10,7 @@ storiesOf('Global/Clickable--SS', module)
         <Clickable
             onClick={action('Clickable Clicked')}
             disabled={boolean('Disabled', false)}
+            theme="primary"
         >
             {text('Label', 'Example')}
         </Clickable>
@@ -24,6 +25,12 @@ storiesOf('Global/Clickable--SS', module)
         </Clickable>
     ))
     .add('Link (href)', () => (
-        <Clickable href="http://www.google.com">Google</Clickable>
+        <Clickable theme="primary" href="http://www.google.com">
+            Google
+        </Clickable>
     ))
-    .add('Link (router)', () => <Clickable to="/">Router Link</Clickable>);
+    .add('Link (router)', () => (
+        <Clickable theme="primary" to="/">
+            Router Link
+        </Clickable>
+    ));
