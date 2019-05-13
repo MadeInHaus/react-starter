@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'ui';
+import { Link } from '@ui';
 import cx from 'classnames';
 
 import styles from './Clickable.scss';

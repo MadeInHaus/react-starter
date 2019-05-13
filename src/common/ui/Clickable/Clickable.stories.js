@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, boolean } from '@storybook/addon-knobs';
 
-import { Clickable } from 'ui';
+import { Clickable } from '@ui';
 
 storiesOf('Global/Clickable--SS', module)
     .add('default', () => (
