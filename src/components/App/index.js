@@ -4,7 +4,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Route, Switch } from 'react-router-dom';
 
-import { Button } from '@ui';
+import { Clickable } from '@ui';
 import CodeSplit from '@components/App/CodeSplit';
 import Home from '@components/App/Home';
 import Navigation from '@components/App/Navigation';
@@ -31,7 +31,9 @@ function App() {
                 </Switch>
             </main>
             <footer className={styles.footer}>
-                <Button href="https://madeinhaus.com">&copy; HAUS</Button>
+                <Clickable theme="primary" href="https://madeinhaus.com">
+                    &copy; HAUS
+                </Clickable>
             </footer>
         </div>
     );
