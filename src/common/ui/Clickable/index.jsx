@@ -23,10 +23,10 @@ const Clickable = ({ className, href, theme, to, ...props }) => {
 };
 
 Clickable.propTypes = {
-    children: PropTypes.Node,
+    children: PropTypes.node.isRequired,
     className: PropTypes.string,
     href: PropTypes.string,
-    theme: PropTypes.oneOf(Object.keys(styles)),
+    theme: PropTypes.oneOf(['primary', 'secondary']),
     to: PropTypes.string,
 };
 
