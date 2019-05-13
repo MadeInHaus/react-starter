@@ -1,94 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Global/Button Link (href) 1`] = `
-<div
-  className="app"
->
-  <a
-    className="root body"
-    href="http://www.google.com"
-  >
-    Google
-  </a>
-</div>
-`;
-
-exports[`Storyshots Global/Button Link (router) 1`] = `
-<div
-  className="app"
->
-  <a
-    className="root body"
-    href="/some-route"
-    onClick={[Function]}
-  >
-    Router Link
-  </a>
-</div>
-`;
-
-exports[`Storyshots Global/Button default 1`] = `
-<div
-  className="app"
->
-  <button
-    className="root body"
-    disabled={false}
-    onClick={[Function]}
-  >
-    Example
-     
-    89
-  </button>
-</div>
-`;
-
-exports[`Storyshots Global/Button primary 1`] = `
-<div
-  className="app"
->
-  <button
-    className="root body"
-    onClick={[Function]}
-    primary="true"
-  >
-    Example
-  </button>
-</div>
-`;
-
-exports[`Storyshots Global/Button with viewport large 1`] = `
-<div
-  className="app"
->
-  <button
-    className="root body"
-    disabled={false}
-    onClick={[Function]}
-  >
-    Example
-     
-    89
-  </button>
-</div>
-`;
-
-exports[`Storyshots Global/Button with viewport small 1`] = `
-<div
-  className="app"
->
-  <button
-    className="root body"
-    disabled={false}
-    onClick={[Function]}
-  >
-    Example
-     
-    89
-  </button>
-</div>
-`;
-
 exports[`Storyshots Global/Clickable--SS Link (href) 1`] = `
 <div
   className="app"
@@ -191,9 +102,11 @@ exports[`Storyshots Global/Input button (Button) 1`] = `
   className="app"
 >
   <button
-    className="root body"
+    className="root primary"
   >
-    Click Me
+    <span>
+      Click Me
+    </span>
   </button>
 </div>
 `;
@@ -259,9 +172,11 @@ exports[`Storyshots Global/Input submit (Button) 1`] = `
   className="app"
 >
   <button
-    className="root body"
+    className="root primary"
   >
-    Submit
+    <span>
+      Submit
+    </span>
   </button>
 </div>
 `;
