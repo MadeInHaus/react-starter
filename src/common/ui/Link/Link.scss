@@ -1,9 +1,0 @@
-@import '~common/style-utils/colors';
-
-.root {
-    composes: _body from global;
-    color: color(black);
-    &:hover {
-        color: color(gray);
-    }
-}
