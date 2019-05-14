@@ -13,6 +13,7 @@
     ._headline {
         font-size: 4rem;
         line-height: 1.2;
+        font-weight: $bold;
     }
 
     ._subheadline {
@@ -25,10 +26,10 @@
     // -------------------------
 
     ._body {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         line-height: 1.5;
-        @include for-desktop-up {
-            font-size: 1.6rem;
+        @include for-tablet-portrait-up {
+            font-size: 1.7rem;
         }
     }
 }
