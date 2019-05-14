@@ -12,7 +12,6 @@ jobs:
         docker:
             - image: circleci/node:9.9.0-browsers
         working_directory: ~/repo
-        parallelism: 3
         steps:
             - checkout
 
