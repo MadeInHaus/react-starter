@@ -1,9 +1,10 @@
 .root {
-    &[type="text"] {
+    composes: _body from global;
+    &[type='text'] {
     }
-    &[type="radio"] {
+    &[type='radio'] {
     }
-    &[type="checkbox"] {
+    &[type='checkbox'] {
     }
 }
 
