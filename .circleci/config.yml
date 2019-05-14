@@ -5,12 +5,12 @@
 version: 2.1
 
 orbs:
-    percy: percy/agent@volatile
+    percy: percy/agent@0.1.2
 
 jobs:
     run_tests:
         docker:
-            - image: circleci/node:9.9.0
+            - image: circleci/node:latest-browsers
         working_directory: ~/repo
         parallelism: 3
         steps:
