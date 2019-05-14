@@ -12,6 +12,7 @@ jobs:
         docker:
             - image: circleci/node:9.9.0
         working_directory: ~/repo
+        parallelism: 3
         steps:
             - checkout
 
@@ -37,7 +38,6 @@ workflows:
         jobs:
             - run_tests:
                   context: dev
-                  parallelism: 3
             - percy/finalize_all:
                   context: dev
                   requires:
