@@ -1,5 +1,4 @@
 @import '~common/style-utils/breakpoints';
-@import '~common/style-utils/colors';
 @import '~common/style-utils/type';
 
 :global {
@@ -28,7 +27,6 @@
     ._body {
         font-size: 1.4rem;
         line-height: 1.5;
-        color: color(gray, light);
         @include for-desktop-up {
             font-size: 1.6rem;
         }
