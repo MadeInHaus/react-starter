@@ -31,7 +31,7 @@ exports[`Storyshots Global/Clickable--SS Link (router) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Global/Clickable--SS default 1`] = `
+exports[`Storyshots Global/Clickable--SS primary 1`] = `
 <div
   className="app"
 >
@@ -188,48 +188,6 @@ exports[`Storyshots Global/Input textarea 1`] = `
   <textarea
     className="textarea"
   />
-</div>
-`;
-
-exports[`Storyshots Global/Link default 1`] = `
-<div
-  className="app"
->
-  <a
-    className="root"
-    href="http://www.google.com"
-  >
-    Example
-  </a>
-</div>
-`;
-
-exports[`Storyshots Global/Link router (link) 1`] = `
-<div
-  className="app"
->
-  <a
-    className="root"
-    href="/someroute"
-    onClick={[Function]}
-  >
-    Example
-  </a>
-</div>
-`;
-
-exports[`Storyshots Global/Link router (navlink) 1`] = `
-<div
-  className="app"
->
-  <a
-    aria-current={null}
-    className="root"
-    href="/someroute"
-    onClick={[Function]}
-  >
-    Example
-  </a>
 </div>
 `;
 
