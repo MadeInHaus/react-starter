@@ -2,6 +2,10 @@ import { configure, addDecorator, addParameters } from '@storybook/react';
 import StoryRouter from 'storybook-router';
 import AppDecorator from './AppDecorator';
 import { withKnobs } from '@storybook/addon-knobs';
+import '../src/common/theme/elements.scss';
+import '../src/common/theme/fonts.scss';
+import '../src/common/theme/root.scss';
+import '../src/common/theme/text.scss';
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /\.stories\.js$/);
