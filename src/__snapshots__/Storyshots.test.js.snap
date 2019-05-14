@@ -149,7 +149,7 @@ exports[`Storyshots Global/Input select 1`] = `
   className="app"
 >
   <select
-    className="select"
+    className="root select"
   >
     <option>
       Example 1
@@ -186,7 +186,7 @@ exports[`Storyshots Global/Input textarea 1`] = `
   className="app"
 >
   <textarea
-    className="textarea"
+    className="root textarea"
   />
 </div>
 `;
