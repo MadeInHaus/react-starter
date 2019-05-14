@@ -12,7 +12,7 @@ const Navigation = () => (
                 activeClassName={styles.selected}
                 className={styles.logo}
             >
-                // SPA Starter
+                // React Starter
             </Clickable>
         </span>
         <span>
