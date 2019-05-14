@@ -2,10 +2,16 @@
 @import '~common/style-utils/colors';
 
 .root {
-    padding: 2rem;
+}
+
+.main {
+    max-width: $desktop;
+    margin: 0 auto;
+    padding: 3rem 2rem;
 }
 
 .footer {
+    width: 100%;
     text-align: right;
     position: fixed;
     bottom: 0;
@@ -16,14 +22,12 @@
 
 @include for-tablet-portrait-up {
     .main {
-        padding-right: 4rem;
-        padding-left: 4rem;
+        padding: 4rem 6rem;
     }
 }
 
 @include for-desktop-up {
     .main {
-        padding-right: 8rem;
-        padding-left: 8rem;
+        padding: 8rem;
     }
 }

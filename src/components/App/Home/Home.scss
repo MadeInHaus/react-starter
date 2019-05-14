@@ -1,7 +1,14 @@
 @import '~common/style-utils/breakpoints';
 
 .root {
-    max-width: $desktop;
+}
+
+.headlines {
+    width: 100%;
+}
+
+.subheadline {
+    max-width: 50rem;
 }
 
 .columns {
@@ -34,15 +41,12 @@
 
 @include for-tablet-portrait-up {
     .columns {
-        padding: 4rem 6rem;
         column-count: 2;
     }
 }
 
 @include for-desktop-up {
     .columns {
-        padding-right: 10rem;
-        padding-left: 10rem;
         column-count: 3;
     }
 }
