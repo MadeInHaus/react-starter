@@ -1,7 +1,15 @@
-import { configure, addDecorator, addParameters } from '@storybook/react';
+import {
+    configure,
+    addDecorator,
+    addParameters,
+    getStorybook,
+    setAddon,
+} from '@storybook/react';
 import StoryRouter from 'storybook-router';
 import AppDecorator from './AppDecorator';
 import { withKnobs } from '@storybook/addon-knobs';
+import createPercyAddon from '@percy-io/percy-storybook';
+
 import '../src/common/theme/elements.scss';
 import '../src/common/theme/fonts.scss';
 import '../src/common/theme/root.scss';
@@ -42,4 +50,7 @@ addParameters({
 addDecorator(withKnobs);
 addDecorator(AppDecorator);
 addDecorator(StoryRouter());
+const { percyAddon, serializeStories } = createPercyAddon();
+setAddon(percyAddon);
 configure(loadStories, module);
+serializeStories(getStorybook);

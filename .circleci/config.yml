@@ -3,8 +3,12 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2
+
+orbs:
+    percy: percy/agent@volatile
+
 jobs:
-    build:
+    run_tests:
         docker:
             # specify the version you desire here
             - image: circleci/node:9.9.0
@@ -35,9 +39,15 @@ jobs:
 
             # run tests!
             - run: npm run test
+
 workflows:
     version: 2
-    main:
+    test:
         jobs:
-            - build:
+            - run_tests:
+                  parallelism: 3
                   context: dev
+            - percy/finalize_all:
+                  context: dev
+                  requires:
+                      - run_tests

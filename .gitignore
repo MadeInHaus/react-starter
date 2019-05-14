@@ -103,3 +103,4 @@ settings.json
 
 # src/__snapshots__
 # src/__image_snapshots__
+/storybook-static
