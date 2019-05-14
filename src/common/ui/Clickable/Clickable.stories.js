@@ -6,7 +6,7 @@ import { text, boolean } from '@storybook/addon-knobs';
 import { Clickable } from '@ui';
 
 storiesOf('Global/Clickable--SS', module)
-    .add('default', () => (
+    .add('primary', () => (
         <Clickable
             onClick={action('Clickable Clicked')}
             disabled={boolean('Disabled', false)}

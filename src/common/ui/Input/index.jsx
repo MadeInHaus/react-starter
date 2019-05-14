@@ -13,7 +13,7 @@ const Input = ({ type, ...props }) => {
             return <textarea className={styles.textarea} {...props} />;
         case 'submit':
         case 'button':
-            return <Clickable {...props} />;
+            return <Clickable theme="primary" {...props} />;
         default:
             return <input type={type} className={styles.root} {...props} />;
     }
