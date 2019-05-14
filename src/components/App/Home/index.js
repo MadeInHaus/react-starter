@@ -6,11 +6,11 @@ import styles from './Home.scss';
 const Home = () => (
     <article className={styles.root}>
         <Text tag="h1" theme="headline">
-            🙋‍♂️
+            React Starter
         </Text>
-        <Text tag="h2" theme="subheadline">
-            Comes bundled with React, Redux, CSS Modules, React-Router 4,
-            Webpack 4
+        <Text tag="h2" theme="subheadline" className={styles.subheadline}>
+            React, Redux, CSS Modules, React-Router 4, Webpack 4, Storybook 5,
+            and Jest
         </Text>
         <div className={styles.columns}>
             <Text tag="p" theme="body">
