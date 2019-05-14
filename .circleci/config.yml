@@ -38,15 +38,15 @@ jobs:
                   key: v1-dependencies-{{ checksum "package.json" }}
 
             # run tests!
-            - run: npm run test
+            - run: npm run test && npm run snapshot
 
 workflows:
     version: 2
-    test:
+    main:
         jobs:
             - run_tests:
-                  parallelism: 3
                   context: dev
+                  parallelism: 3
             - percy/finalize_all:
                   context: dev
                   requires:
