@@ -10,7 +10,7 @@ orbs:
 jobs:
     run_tests:
         docker:
-            - image: circleci/node:latest-browsers
+            - image: circleci/node:9.9.0-browsers
         working_directory: ~/repo
         parallelism: 3
         steps:
