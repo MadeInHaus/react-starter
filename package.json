@@ -18,8 +18,8 @@
         "storybook": "start-storybook -p 9001 -c .storybook",
         "build-storybook": "build-storybook",
         "test": "export NODE_ENV=test && jest",
-        "screenshot": "export NODE_ENV=screenshot && jest",
-        "screenshot:ci": "kill-port --port 9001 && (npm run storybook & wait-on tcp:localhost:9001) && export NODE_ENV=screenshot && jest",
+        "screenshot:local": "export NODE_ENV=screenshot && jest",
+        "screenshot": "build-storybook && PERCY_TOKEN=$PERCY_TOKEN percy-storybook --widths=375,1280 --debug",
         "wait-on": "wait-on",
         "kill-port": "kill-port"
     },
@@ -53,6 +53,7 @@
         "@babel/plugin-transform-modules-commonjs": "^7.4.4",
         "@babel/preset-env": "7.3.4",
         "@babel/preset-react": "7.0.0",
+        "@percy-io/percy-storybook": "^2.1.0",
         "@storybook/addon-actions": "^5.0.11",
         "@storybook/addon-knobs": "^5.0.11",
         "@storybook/addon-links": "^5.0.11",
