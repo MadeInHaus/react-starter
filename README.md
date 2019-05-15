@@ -62,6 +62,7 @@ Run Image Snapshots of Stories (locally with Jest Image Snapshots):
 Run Image Snapshots of Stories (with Percy):
 
 -   [percy](https://docs.percy.io/docs/storybook/)
+
     _replace `$PERCY_TOKEN` with your percy account api token in the `package.json` to run locally_
 
 Run Percy Image Snapshots
