@@ -5,7 +5,7 @@ import { text, boolean } from '@storybook/addon-knobs';
 
 import { Clickable } from '@ui';
 
-storiesOf('Global/Clickable--SS', module)
+storiesOf('Global/Clickable', module)
     .add('primary', () => (
         <Clickable
             onClick={action('Clickable Clicked')}
