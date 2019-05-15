@@ -43,6 +43,7 @@ if (process.env.NODE_ENV === 'screenshot') {
     testDevices.map(device => {
         const customizePage = createCustomizePage(device);
         initStoryshots({
+            storyKindRegex: /^((?!Global\/Loader).)*$/, // skip loader screenshot since it is always moving
             suite: `Image storyshots: ${device.name}`,
             test: imageSnapshot({
                 storybookUrl,
