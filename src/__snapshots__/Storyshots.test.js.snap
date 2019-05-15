@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Global/Clickable--SS Link (href) 1`] = `
+exports[`Storyshots Global/Clickable Link (href) 1`] = `
 <div
   className="app"
 >
@@ -15,7 +15,7 @@ exports[`Storyshots Global/Clickable--SS Link (href) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Global/Clickable--SS Link (router) 1`] = `
+exports[`Storyshots Global/Clickable Link (router) 1`] = `
 <div
   className="app"
 >
@@ -31,7 +31,7 @@ exports[`Storyshots Global/Clickable--SS Link (router) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Global/Clickable--SS primary 1`] = `
+exports[`Storyshots Global/Clickable primary 1`] = `
 <div
   className="app"
 >
@@ -47,7 +47,7 @@ exports[`Storyshots Global/Clickable--SS primary 1`] = `
 </div>
 `;
 
-exports[`Storyshots Global/Clickable--SS secondary 1`] = `
+exports[`Storyshots Global/Clickable secondary 1`] = `
 <div
   className="app"
 >
@@ -68,7 +68,7 @@ exports[`Storyshots Global/Img default 1`] = `
   className="app"
 >
   <img
-    src="https://placeimg.com/640/480/animals"
+    src="https://dummyimage.com/300x200/2f69c6/fff"
   />
 </div>
 `;
