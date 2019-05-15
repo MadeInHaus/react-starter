@@ -24,24 +24,17 @@ addParameters({
     viewport: {
         viewports: {
             small: {
-                name: 'small',
+                name: 'mobile',
                 styles: {
                     width: '375px',
-                    height: '550px',
-                },
-            },
-            medium: {
-                name: 'medium',
-                styles: {
-                    width: '768px',
-                    height: '950px',
+                    height: '800px',
                 },
             },
             large: {
-                name: 'large',
+                name: 'desktop',
                 styles: {
-                    width: '1440px',
-                    height: '900px',
+                    width: '1280px',
+                    height: '800px',
                 },
             },
         },
