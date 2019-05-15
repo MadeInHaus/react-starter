@@ -29,7 +29,7 @@ jobs:
                       - node_modules
                   key: v1-dependencies-{{ checksum "package.json" }}
 
-            - run: npm run test && npm run snapshot
+            - run: npm run test && npm run screenshot
 
 workflows:
     version: 2
