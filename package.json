@@ -24,7 +24,9 @@
         "kill-port": "kill-port"
     },
     "jest": {
-        "snapshotSerializers": ["enzyme-to-json/serializer"],
+        "snapshotSerializers": [
+            "enzyme-to-json/serializer"
+        ],
         "setupFiles": [
             "<rootDir>/.jest/register-context.js",
             "<rootDir>/.jest/setupTests.js"
