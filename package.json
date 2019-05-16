@@ -18,6 +18,7 @@
         "storybook": "start-storybook -p 9001 -c .storybook",
         "build-storybook": "build-storybook",
         "test": "export NODE_ENV=test && jest",
+        "test:watch": "export NODE_ENV=test && jest --watch",
         "screenshot:local": "export NODE_ENV=screenshot && jest",
         "screenshot": "build-storybook && PERCY_TOKEN=$PERCY_TOKEN percy-storybook --widths=375,1280 --debug",
         "wait-on": "wait-on",
