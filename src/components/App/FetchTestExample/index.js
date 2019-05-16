@@ -2,13 +2,12 @@ import React from 'react';
 
 import { getCharacterOrigin } from './fetchTestFunctions';
 
-class TestExample extends React.Component {
+class FetchExample extends React.Component {
     state = {
         origin: '',
     };
     componentDidMount() {
         getCharacterOrigin(fetch, 2).then(result => {
-            console.log('origin:', result);
             this.setState({
                 origin: result,
             });
@@ -19,4 +18,4 @@ class TestExample extends React.Component {
     }
 }
 
-export default TestExample;
+export default FetchExample;
