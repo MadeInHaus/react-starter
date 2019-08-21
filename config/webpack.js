@@ -7,8 +7,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const getPublicPath = require('./getPublicPath');
 const generateScopedName = require('./generateScopedName');
 
-const browserlist = ['> 1% in US', 'not ie 11', 'not op_mini all'];
-
 module.exports = function(config = {}) {
     const DEV = config.dev || false;
     const webpackConfig = {
@@ -80,13 +78,9 @@ module.exports = function(config = {}) {
                             [
                                 '@babel/preset-env',
                                 {
-                                    targets: {
-                                        browsers: browserlist,
-                                    },
-                                    modules: false,
-                                    loose: true,
-                                    useBuiltIns: false,
-                                    debug: true,
+                                    useBuiltIns: 'usage',
+                                    debug: false,
+                                    corejs: '3',
                                 },
                             ],
                             '@babel/preset-react',
@@ -129,9 +123,10 @@ module.exports = function(config = {}) {
                         DEV ? 'style-loader' : MiniCssExtractPlugin.loader,
                         {
                             loader: 'css-loader',
-                            query: {
-                                modules: true,
-                                getLocalIdent: generateScopedName,
+                            options: {
+                                modules: {
+                                    getLocalIdent: generateScopedName,
+                                },
                                 importLoaders: 1,
                             },
                         },
@@ -141,9 +136,7 @@ module.exports = function(config = {}) {
                                 sourceMap: true,
                                 plugins: () => {
                                     return [
-                                        require('autoprefixer')({
-                                            browsers: browserlist,
-                                        }),
+                                        require('autoprefixer')({}),
                                     ];
                                 },
                             },

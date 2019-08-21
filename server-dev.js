@@ -1,4 +1,4 @@
-require('dotenv').load();
+require('dotenv').config();
 
 function devServer(app) {
     const webpack = require('webpack');
