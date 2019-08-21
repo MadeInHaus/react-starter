@@ -1,2 +1,2 @@
-require('dotenv').load();
+require('dotenv').config();
 require('./build/server/server')();
