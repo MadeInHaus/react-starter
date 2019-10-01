@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Text } from '@ui';
-import { FadeTransform } from 'react-animation-components';
 
 const LazyLoaded = () =>
     console.log('Lazy loaded 👏') || (
-        <FadeTransform in timeout={60}>
+        <Fragment>
             <Text theme="headline" tag="h1">
                 Code Splitting
             </Text>
@@ -21,7 +20,7 @@ const LazyLoaded = () =>
                 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍 👍
                 👍 👍 👍 ❤️
             </Text>
-        </FadeTransform>
+        </Fragment>
     );
 
 export default LazyLoaded;
