@@ -1,5 +1,5 @@
 {
-    "name": "react-redux-webpack-starter",
+    "name": "react-starter",
     "version": "1.0.0",
     "engines": {
         "node": ">=10.16.3"
