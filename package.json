@@ -90,7 +90,7 @@
         "webpack-node-externals": "1.7.2"
     },
     "dependencies": {
-        "acorn": "7.1.0",
+        "acorn": "7.1.1",
         "axios": "0.19.1",
         "classnames": "2.2.6",
         "compression": "1.7.4",
