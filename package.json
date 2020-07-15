@@ -102,7 +102,7 @@
         "express": "4.17.1",
         "imagemin-webpack-plugin": "2.4.2",
         "keymirror": "0.1.1",
-        "lodash": "4.17.15",
+        "lodash": "4.17.19",
         "mini-css-extract-plugin": "0.9.0",
         "normalize.css": "8.0.1",
         "npm-check-updates": "4.0.1",
