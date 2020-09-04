@@ -64,7 +64,7 @@
         "extend": "3.0.2",
         "file-loader": "5.0.2",
         "html-webpack-plugin": "3.2.0",
-        "http-proxy": "1.18.0",
+        "http-proxy": "1.18.1",
         "incstr": "1.2.3",
         "node-sass": "4.13.0",
         "nodemon": "2.0.2",
