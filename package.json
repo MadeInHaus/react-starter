@@ -99,7 +99,7 @@
         "debug": "4.1.1",
         "dotenv": "8.2.0",
         "env-cmd": "10.0.1",
-        "express": "4.17.1",
+        "express": "4.17.3",
         "imagemin-webpack-plugin": "2.4.2",
         "keymirror": "0.1.1",
         "lodash": "4.17.15",
